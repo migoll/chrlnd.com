@@ -1,0 +1,632 @@
+body {
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+:root {
+  --rød: #c4262d;
+  --lyse-grøn: #9c9e30;
+  --mørke-grøn: #737d4a;
+  --sort: #4d4d4d;
+  --hvid: #ededed;
+  --blå: #039ec5;
+  --gul: #ca9f28;
+}
+
+
+
+
+/* HERO */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.hero-tekst {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.hero-tekst h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 1rem 2rem;
+  margin-top: 5rem;
+}
+
+.hero-tekst h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 1rem 2rem;
+}
+
+.hero-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: var(--gul);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+  margin: 1rem 2rem;
+}
+
+.hero-button:hover {
+  background-color: var(--rød);
+  color: white;
+}
+
+/* VELKOMMEN */
+
+.index-velkommen {
+  display: flex;
+  flex-direction: column;
+  background: var(--mørke-grøn);
+}
+
+.index-velkommen h2,
+.index-velkommen p {
+  color: white;
+  margin: 40px;
+  margin-bottom: 0;
+}
+
+.index-velkommen p {
+  line-height: 150%;
+}
+
+.index-velkommen img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* AKTIVITETER */
+
+.index-aktiviteter {
+  background: var(--lyse-grøn);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.aktiviteter-container {
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 40px auto;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.aktiviteter-header {
+  background-color: var(--mørke-grøn);
+  color: white;
+  text-align: center;
+  padding: 40px 40px;
+  font-size: 25px;
+}
+
+.skema {
+  display: flex;
+  flex-direction: column;
+}
+
+.tid,
+.aktivitet {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tid {
+  background-color: rgb(224, 224, 224);
+  font-weight: bold;
+}
+
+.kalender {
+  background-color: white;
+}
+
+.moned {
+  padding: 20px 2px;
+  width: 100%;
+  background: var(--mørke-grøn);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.moned ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.moned ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.ugedage {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ugedage li {
+  width: 13.6%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.dage {
+  margin: 0;
+  padding: 10px 0;
+  background: #eee;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dage li {
+  width: 14.25%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.active,
+li span {
+  background-color: var(--rød);
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* ÅBNINGSTIDER */
+
+.index-åbningstider {
+  display: flex;
+  flex-direction: column;
+  background: var(--mørke-grøn);
+}
+
+.index-åbningstider h2,
+.index-åbningstider p {
+  color: white;
+  margin: 40px;
+  margin-bottom: 0;
+}
+
+.index-åbningstider p {
+  line-height: 150%;
+}
+
+.index-åbningstider img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* NYHEDER */
+
+.index-nyheder {
+  display: flex;
+  flex-direction: column;
+  background: var(--lyse-grøn);
+  padding-bottom: 40px;
+}
+
+.index-nyheder h2 {
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.nyhed-card {
+  margin: 40px;
+  background: var(--sort);
+}
+
+.nyhed-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-text-box {
+  padding: 10px;
+}
+
+.card-text-box p {
+  color: white;
+  margin: 20px;
+}
+
+/* ZOO-SHOPPEN */
+
+.index-zoo-shoppen {
+  display: flex;
+  flex-direction: column;
+  background: var(--mørke-grøn);
+  padding-bottom: 40px;
+}
+
+.index-zoo-shoppen h2,
+.index-zoo-shoppen p {
+  color: white;
+  margin: 40px;
+  margin-bottom: 0;
+}
+
+.index-zoo-shoppen p {
+  line-height: 150%;
+}
+
+.index-zoo-shoppen img {
+  width: 100%;
+}
+
+/* MOVABLE MAP */
+
+.index-map {
+  background: var(--lyse-grøn);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.movable-map img {
+  width: 100%;
+}
+
+.drag-cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drag-cursor i {
+  font-size: 70px;
+}
+
+.map-functions {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.map-functions i {
+  font-size: 25px;
+  background: var(--mørke-grøn);
+  padding: 10px;
+}
+
+/* INFORMATION */
+
+.index-information {
+  display: flex;
+  flex-direction: column;
+  background: var(--mørke-grøn);
+}
+
+.søger-medarbejdere,
+.historie {
+  margin: 40px;
+}
+
+.index-information img {
+  width: 100%;
+}
+
+.søger-medarbejdere h2,
+p,
+.historie h2,
+p {
+  color: white;
+}
+
+.søger-medarbejdere p,
+.historie p {
+  line-height: 150%;
+}
+
+.søger-medarbejdere h2{
+  margin-bottom: 2rem;
+  text-align: center
+}
+
+.søger-medarbejdere p{
+  text-align: center;
+}
+
+.historie-grid-2 h2{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.historie-grid-2 p{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.søger-medarbejdere button {
+  padding: 0.75rem 1.5rem;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: var(--gul);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.søger-medarbejdere a{
+  text-decoration: none;
+}
+
+.søger-medarbejdere button:hover {
+  background-color: var(--rød);
+  color: white;
+}
+
+
+/* DESKTOP */
+
+
+@media (min-width: 768px) {
+  
+  .hero-tekst h1 {
+    margin-top: 200px;
+    font-size: 3rem;
+    margin-left: 150px;
+  }
+
+  .hero-tekst h2 {
+    font-size: 2rem;
+    margin-left: 150px;
+  }
+
+  .hero-container {
+    height: 95vh;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    padding: 1.25rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    margin: 1rem 10rem;
+  }
+
+  .aktiviteter-container {
+    margin: 0 10rem;
+  }
+
+  .aktiviteter-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .skema {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aktivitet-grid-1,
+  .aktivitet-grid-2,
+  .aktivitet-grid-3 {
+    grid-column: span 1;
+  }
+
+  .index-velkommen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .velkommen-grid-1 {
+    order: 2;
+  }
+
+  .index-velkommen h2 {
+    margin: 70px;
+  }
+
+  .index-velkommen p {
+    margin-left: 70px;
+  }
+
+  .index-velkommen img {
+    margin: 0;
+    order: 1;
+  }
+
+  .index-åbningstider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .index-åbningstider h2 {
+    margin: 70px;
+  }
+
+  .index-åbningstider p {
+    margin-left: 70px;
+  }
+
+  .index-åbningstider img {
+    margin: 0;
+  }
+
+  .index-nyheder h2 {
+    margin-top: 6rem;
+  }
+
+
+
+  .index-zoo-shoppen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+  }
+
+  .index-zoo-shoppen h2 {
+    margin: 70px;
+  }
+
+  .index-zoo-shoppen p {
+    margin-left: 70px;
+  }
+
+  .zoo-shoppen-grid-1 img {
+    margin: 0;
+  }
+
+  .drag-cursor i {
+    font-size: 250px;
+  }
+
+  .map-functions {
+    margin: 2rem 8rem;
+    gap: 3rem;
+  }
+
+  .map-functions i {
+    font-size: 45px;
+  }
+
+  .søger-medarbejdere {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px;
+  }
+
+  .søger-medarbejdere button {
+    padding: 1.25rem 2rem;
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 1rem 10rem;
+  }
+
+  .historie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10rem;
+  }
+
+  .index-information h2,
+  p {
+    margin: 40px;
+    margin-top: 0;
+  }
+
+  .index-information {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .generel-entry-points {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 70px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 70px;
+}
+.nyhed-card {
+  width: 33%;
+}
+
+.historie-grid-2 h2{
+  margin-left: 2rem;
+  
+}
+
+.historie-grid-2 p{
+  margin-left: 2rem;
+}
+
+.søger-medarbejdere p{
+  margin-right: 2rem;
+}
+
+.søger-medarbejdere h2{
+  margin-right: 4rem;
+}
+
+}
+
