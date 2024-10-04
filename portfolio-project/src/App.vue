@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import Portfolio from "./components/sections/portfolio.vue";
+</script>
 
-<template></template>
+<template>
+  <Portfolio />
+</template>
 
 <style scoped></style>
