@@ -5,6 +5,10 @@
   src: url("/public/fonts/GeistMonoVF.woff") format("woff");
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "GeistMono", sans-serif;
   background-color: #ffffff;
@@ -17,4 +21,5 @@ h4,
 h5,
 p {
   font-family: "GeistMono", sans-serif;
+  background-color: #ffffff;
 }
