@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "GeistMono";
-  src: url("/public/fonts/GeistVF.woff") format("woff"),
+  src: url("/public/fonts/GeistVF.woff2") format("woff2"),
     url("/public/fonts/GeistMonoVF.woff") format("woff");
 }
 
