@@ -6,10 +6,6 @@
     url("/public/fonts/GeistMonoVF.woff") format("woff");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   font-family: "GeistMono", sans-serif;
   background-color: #ffffff;
