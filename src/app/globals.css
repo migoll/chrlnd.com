@@ -1,16 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
-@font-face {
-  font-family: "GeistMono";
-  src: url("/public/fonts/GeistMonoVF.woff") format("woff");
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "GeistMono", sans-serif;
   background-color: #ffffff;
 }
 
@@ -20,6 +14,9 @@ h3,
 h4,
 h5,
 p {
-  font-family: "GeistMono", sans-serif;
   background-color: #ffffff;
+}
+
+p {
+  @apply text-2xl font-medium;
 }

@@ -1,10 +1,10 @@
+import Link from "next/link";
+import { Section } from "./section";
+
 export function TheHeader() {
   return (
-    <header className="w-full py-4">
-      <nav
-        className="flex justify-between items-center max-w-[664px] mx-auto p-8 border"
-        style={{ borderColor: "rgba(0, 0, 0, 0.08)" }}
-      >
+    <Section contentClassName="p-8 font-medium">
+      <nav className="flex justify-between items-center">
         <div className="link">
           <p className="text-xl">chrlnd.com</p>
         </div>
@@ -12,12 +12,12 @@ export function TheHeader() {
           <a href="">
             <p className="text-xl">work</p>
           </a>
-          <a href="">
-            <p className="text-xl">about me</p>
-          </a>
+          <Link href="/about" className="text-xl">
+            about me
+          </Link>
           <span className="material-symbols-outlined">light_mode</span>
         </div>
       </nav>
-    </header>
+    </Section>
   );
 }
