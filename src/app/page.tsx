@@ -1,3 +1,9 @@
 export default function HomePage() {
-  return <></>;
+  return (
+    <>
+      <section className="Introduction">
+        <img src="" alt="" />
+      </section>
+    </>
+  );
 }
