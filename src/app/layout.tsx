@@ -6,8 +6,8 @@ import { clsx } from "clsx";
 import { Section } from "@/components/section";
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "This is my portfolio site",
+  title: "chrlnd.com",
+  description: "Portfolio website by Christian Lund",
 };
 
 export default function RootLayout({
