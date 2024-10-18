@@ -7,6 +7,8 @@ import {
   faVuejs,
   faReact,
   faFigma,
+  faLinkedin,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function HomePage() {
@@ -31,19 +33,11 @@ export default function HomePage() {
           <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5">
             Reach out
           </button>
-          <a href="https://github.com/migoll">
-            <img
-              src="./icons/linkedin-brands-solid.svg"
-              alt="linkedin icon"
-              className="w-8 h-8"
-            />
-          </a>
           <a href="https://www.linkedin.com/in/christian-lund-2125322b8/">
-            <img
-              src="./icons/github-brands-solid.svg"
-              alt="github icon"
-              className="w-8 h-8"
-            />
+            <FontAwesomeIcon icon={faLinkedin} className="size-9" />
+          </a>
+          <a href="https://github.com/migoll">
+            <FontAwesomeIcon icon={faGithub} className="size-9" />
           </a>
         </div>
       </Section>
