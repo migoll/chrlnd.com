@@ -23,11 +23,13 @@ export function BubbleSection(props: BubbleSectionProps) {
       <div className={clsx("w-[1px] h-40 bg-gray-300", lineClassName)}></div>
       <div
         className={clsx(
-          "border rounded-full py-16 flex justify-center items-center flex-col text-center gap-6 max-w-screen-sm w-full box-content px-8", // Change to box-content
+          "border rounded-full py-16 flex justify-center items-center flex-col text-center max-w-screen-sm w-full box-content px-8",
           contentClassName
         )}
       >
-        <div>{children}</div>
+        {/* div container to make sure my BubbleSections have the same width as
+        the other sections */}
+        <div className="gap-6">{children}</div>
       </div>
     </div>
   );
