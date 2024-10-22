@@ -7,11 +7,19 @@ export interface BubbleSectionProps {
   containerClassName?: string;
   // this is to control the 1x line between the "bubbles"
   lineClassName?: string;
+  index: number;
 }
 
 export function BubbleSection(props: BubbleSectionProps) {
-  const { children, contentClassName, containerClassName, lineClassName } =
-    props;
+  const {
+    children,
+    contentClassName,
+    containerClassName,
+    lineClassName,
+    index,
+  } = props;
+
+  const years = ["2022", "2024", "Now"];
 
   return (
     <div
@@ -20,7 +28,9 @@ export function BubbleSection(props: BubbleSectionProps) {
         containerClassName
       )}
     >
-      <div className={clsx("w-[1px] h-40 bg-gray-300", lineClassName)}></div>
+      <div className={clsx("w-[1px] h-28 bg-gray-300", lineClassName)}></div>
+      <p className="text-base">{years[index]}</p>
+      <div className={clsx("w-[1px] h-10 bg-gray-300", lineClassName)}></div>
       <div
         className={clsx(
           "border rounded-full py-16 flex justify-center items-center flex-col text-center max-w-screen-sm w-full box-content px-8",
@@ -29,7 +39,7 @@ export function BubbleSection(props: BubbleSectionProps) {
       >
         {/* div container to make sure my BubbleSections have the same width as
         the other sections */}
-        <div className="gap-6">{children}</div>
+        <div>{children}</div>
       </div>
     </div>
   );

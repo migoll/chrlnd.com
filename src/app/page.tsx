@@ -62,7 +62,7 @@ export default function HomePage() {
           <FontAwesomeIcon icon={faFigma} className="size-12" />
         </div>
       </Section>
-      <BubbleSection>
+      <BubbleSection index={0}>
         <div className="pb-6">
           <h2 className="text-xl font-bold">Web design</h2>
           <h3 className="text-neutral-500">Figma</h3>
@@ -72,7 +72,7 @@ export default function HomePage() {
           and interest in emoji/emote design on online streaming platforms.
         </p>
       </BubbleSection>
-      <BubbleSection>
+      <BubbleSection index={1}>
         <div className="pb-6">
           <h2 className="text-xl font-bold">Front-end development</h2>
           <h3 className="text-neutral-500">HTML, CSS, JS</h3>
@@ -82,7 +82,7 @@ export default function HomePage() {
           HTML, CSS, and then JS. Ended up using the framework Vue.
         </p>
       </BubbleSection>
-      <BubbleSection>
+      <BubbleSection index={2}>
         <div className="pb-6">
           <h2 className="text-xl font-bold">Frameworks</h2>
           <h3 className="text-neutral-500">Vue, React, TSX, Tailwind</h3>
