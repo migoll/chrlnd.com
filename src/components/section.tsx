@@ -14,7 +14,7 @@ export function Section(props: SectionProps) {
   return (
     <div
       className={clsx(
-        " border-b border-neutral-950 last:border-b-0 border-opacity-10",
+        "border-b border-neutral-950 last:border-b-0 border-opacity-10",
         containerClassName
       )}
     >
