@@ -1,4 +1,5 @@
 import { Section } from "@/components/section";
+import { BubbleSection } from "@/components/bubble-section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -61,6 +62,37 @@ export default function HomePage() {
           <FontAwesomeIcon icon={faFigma} className="size-12" />
         </div>
       </Section>
+      <BubbleSection>
+        <div>
+          <h2 className="text-xl font-bold">Web design</h2>
+          <h3 className="text-neutral-500">Figma</h3>
+        </div>
+        <p className="text-lg text-center w-[85%] text-neutral-600 font-normal">
+          I began designing in Figma because of my interests in the Web3 space,
+          and interest in emoji/emote design on online streaming platforms
+        </p>
+      </BubbleSection>
+      <BubbleSection>
+        <div>
+          <h2 className="text-xl font-bold">Front-end development</h2>
+          <h3 className="text-neutral-500">HTML, CSS, JS</h3>
+        </div>
+        <p className="text-lg text-center w-[85%] text-neutral-600 font-normal">
+          I started studying Multimedia design, where i started with learning
+          HTML, CSS and then JS. Ended up using the frame work Vue.
+        </p>
+      </BubbleSection>
+      <BubbleSection>
+        <div>
+          <h2 className="text-xl font-bold">Frameworks</h2>
+          <h3 className="text-neutral-500">Vue, React, TSX, Tailwind</h3>
+        </div>
+        <p className="text-lg text-center w-[85%] text-neutral-600 font-normal">
+          I initially focused on Vue for school work, but I became interested in
+          learning other tools like React and TypeScript. Tailwind CSS quickly
+          became my go-to for efficiently styling modern interfaces.
+        </p>
+      </BubbleSection>
     </>
   );
 }
