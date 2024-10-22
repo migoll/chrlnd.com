@@ -63,7 +63,7 @@ export default function HomePage() {
         </div>
       </Section>
       <BubbleSection>
-        <div>
+        <div className="pb-6">
           <h2 className="text-xl font-bold">Web design</h2>
           <h3 className="text-neutral-500">Figma</h3>
         </div>
@@ -73,7 +73,7 @@ export default function HomePage() {
         </p>
       </BubbleSection>
       <BubbleSection>
-        <div>
+        <div className="pb-6">
           <h2 className="text-xl font-bold">Front-end development</h2>
           <h3 className="text-neutral-500">HTML, CSS, JS</h3>
         </div>
@@ -83,7 +83,7 @@ export default function HomePage() {
         </p>
       </BubbleSection>
       <BubbleSection>
-        <div>
+        <div className="pb-6">
           <h2 className="text-xl font-bold">Frameworks</h2>
           <h3 className="text-neutral-500">Vue, React, TSX, Tailwind</h3>
         </div>
