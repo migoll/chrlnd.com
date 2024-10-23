@@ -5,7 +5,7 @@ export default function CaseStudyOne() {
     <>
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
         <a href="/">
-          <button className="text-xl font-bold bg-black text-white rounded-full w-12 h-20 hover:bg-neutral-800">
+          <button className="text-3xl font-bold bg-black text-white rounded-full w-[96px] h-[144px] hover:bg-neutral-800">
             ←
           </button>
         </a>
@@ -25,14 +25,14 @@ export default function CaseStudyOne() {
               <p className="font-semibold">Website</p>
               <a href="https://mmd.ucn.dk/class/MMD-CSD-S23/10503170/mmd3/Sejr-og-Davidsens-Dyrepension-og--internat-Gruppe-4/index.html">
                 <p className="underline decoration-none font-normal text-lg">
-                  Hyperlink
+                  Link
                 </p>
               </a>
             </div>
           </div>
           <p>
-            En platform der forbinder dyreejere og eksperter med fokus på
-            OOUX-processen for at sikre en brugercentreret oplevelse.
+            A platform that connects animal owners and experts with focus on the
+            OOUX-process, to ensure a user focused experience.
           </p>
         </div>
       </Section>

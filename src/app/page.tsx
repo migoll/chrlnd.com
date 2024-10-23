@@ -34,9 +34,11 @@ export default function HomePage() {
           </p>
         </div>
         <div className="flex gap-6 items-center">
-          <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5">
-            Reach out
-          </button>
+          <a href="mailto:chris.lund02@gmail.com">
+            <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5">
+              Reach out
+            </button>
+          </a>
           <a href="https://www.linkedin.com/in/christian-lund-2125322b8/">
             <FontAwesomeIcon icon={faLinkedin} className="size-9" />
           </a>
@@ -73,13 +75,14 @@ export default function HomePage() {
               <Image
                 src="/images/case-study-1-image.png"
                 alt="Case study image"
-                className="aspect-square w-full"
-                width={640}
-                height={640}
+                className="aspect-square mx-auto"
+                width={540}
+                height={540}
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
-              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+              Sejr og Davidsens Dyrepension - Realized website for animal
+              pension
             </h3>
             <div className="flex gap-4">
               <p className="text-sm text-neutral-500">OO-UX</p>
@@ -89,25 +92,25 @@ export default function HomePage() {
           <div>
             <a href="/my-work/border-animation-case-study">
               <Image
-                src="/images/case-study-1-image.png"
+                src="/images/case-study-two-image.png"
                 alt="Case study image"
-                className="aspect-square w-full"
+                className="aspect-square object-contain"
                 width={640}
                 height={640}
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
-              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+              Jooser - Instant payment crypto app design
             </h3>
             <div className="flex gap-4">
-              <p className="text-sm text-neutral-500">OO-UX</p>
-              <p className="text-sm text-neutral-500">Website</p>
+              <p className="text-sm text-neutral-500">Design</p>
+              <p className="text-sm text-neutral-500">Application</p>
             </div>
           </div>
           <div>
             <a href="/my-work/guldborgsund-zoo-case-study">
               <Image
-                src="/images/case-study-1-image.png"
+                src="/images/case-study-3-image.png"
                 alt="Case study image"
                 className="aspect-square w-full"
                 width={640}
@@ -115,10 +118,10 @@ export default function HomePage() {
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
-              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+              Guldborgsund Zoo og Have - Realized website for zoo
             </h3>
             <div className="flex gap-4">
-              <p className="text-sm text-neutral-500">OO-UX</p>
+              <p className="text-sm text-neutral-500">Wordpress API</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
           </div>

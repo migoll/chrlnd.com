@@ -5,34 +5,22 @@ export default function CaseStudyOne() {
     <>
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
         <a href="/">
-          <button className="text-xl font-bold bg-black text-white rounded-full w-12 h-20 hover:bg-neutral-800">
+          <button className="text-3xl font-bold bg-black text-white rounded-full w-[96px] h-[144px] hover:bg-neutral-800">
             ←
           </button>
         </a>
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl">Border animations</h1>
-          <div className="flex justify-between w-[80%]">
-            <div>
-              <p className="font-semibold">Client</p>
-              <p className="font-normal text-lg">Sejr og davidsen</p>
-            </div>
+          <h1 className="font-bold text-7xl">Crypto transaction app</h1>
+          <div className="flex justify-between w-[60%]">
             <div>
               <p className="font-semibold">Role</p>
               <p className="font-normal text-lg">OOUX design, front-end</p>
             </div>
-            <div>
-              <p className="font-semibold">Website</p>
-              <a href="https://mmd.ucn.dk/class/MMD-CSD-S23/10503170/mmd3/Sejr-og-Davidsens-Dyrepension-og--internat-Gruppe-4/index.html">
-                <p className="underline decoration-none font-normal text-lg">
-                  Hyperlink
-                </p>
-              </a>
-            </div>
           </div>
           <p>
-            En platform der forbinder dyreejere og eksperter med fokus på
-            OOUX-processen for at sikre en brugercentreret oplevelse.
+            Mobile app design that provides an intuitive way for users to make
+            cryptocurrency transactions
           </p>
         </div>
       </Section>
