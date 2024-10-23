@@ -65,7 +65,25 @@ export default function HomePage() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My work</h2>
         <div>
-          <img src="" alt="" className="aspect-square w-full" />
+          <img
+            src="/images/case-study-1-img.png"
+            alt="Case study image"
+            className="aspect-square w-full"
+          />
+          <h3 className="font-bold text-lg">
+            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+          </h3>
+          <div className="flex gap-4">
+            <p className="text-sm text-neutral-500">OO-UX</p>
+            <p className="text-sm text-neutral-500">Website</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/case-study-1-img.png"
+            alt="Case study image"
+            className="aspect-square w-full"
+          />
           <h3>
             Sejr og Davidsens dyrepension - Realiseret website til dyrepension
           </h3>
@@ -75,17 +93,11 @@ export default function HomePage() {
           </div>
         </div>
         <div>
-          <img src="" alt="" />
-          <h3>
-            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
-          </h3>
-          <div className="flex gap-4">
-            <p className="text-sm text-neutral-500">OO-UX</p>
-            <p className="text-sm text-neutral-500">Website</p>
-          </div>
-        </div>
-        <div>
-          <img src="" alt="" />
+          <img
+            src="/images/case-study-1-img.png"
+            alt="Case study image"
+            className="aspect-square w-full"
+          />
           <h3>
             Sejr og Davidsens dyrepension - Realiseret website til dyrepension
           </h3>
