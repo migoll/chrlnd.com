@@ -4,6 +4,11 @@ export default function CaseStudyOne() {
   return (
     <>
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
+        <a href="/">
+          <button className="text-xl font-bold bg-black text-white rounded-full w-12 h-20 hover:bg-neutral-800">
+            ←
+          </button>
+        </a>
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
           <h1 className="font-bold text-7xl">Guldborgsund zoo</h1>
