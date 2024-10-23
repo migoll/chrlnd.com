@@ -58,7 +58,7 @@ export default function CaseStudyOne() {
           We first developed the object map, where we categorized and
           prioritized objects like adoptable animals, training, and tips and
           tricks. From there, we worked on user flows and a CTA matrix, which
-          supported the users’ journey on the platform.
+          supported the users journey on the platform.
         </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
@@ -66,7 +66,7 @@ export default function CaseStudyOne() {
         <ul className="flex flex-col gap-4">
           <li>
             <span className="font-bold">Object Map:</span> Developed to ensure
-            the structure of the platform's key objects.
+            the structure of the platforms key objects.
           </li>
           <li>
             <span className="font-bold">User Flows and CTA Matrix:</span>{" "}
