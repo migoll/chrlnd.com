@@ -6,7 +6,7 @@ export default function CaseStudyOne() {
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl">Guldborgsund zoo</h1>
+          <h1 className="font-bold text-7xl">Border animations</h1>
           <div className="flex justify-between w-[80%]">
             <div>
               <p className="font-semibold">Client</p>

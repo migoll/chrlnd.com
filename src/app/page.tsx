@@ -64,46 +64,54 @@ export default function HomePage() {
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My work</h2>
-        <div>
-          <img
-            src="/images/case-study-1-img.png"
-            alt="Case study image"
-            className="aspect-square w-full"
-          />
-          <h3 className="font-bold text-lg">
-            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
-          </h3>
-          <div className="flex gap-4">
-            <p className="text-sm text-neutral-500">OO-UX</p>
-            <p className="text-sm text-neutral-500">Website</p>
+        <div className="flex flex-col gap-8">
+          <div>
+            <a href="/my-work/animal-pension-case-study">
+              <img
+                src="/images/case-study-1-image.png"
+                alt="Case study image"
+                className="aspect-square w-full"
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+            </h3>
+            <div className="flex gap-4">
+              <p className="text-sm text-neutral-500">OO-UX</p>
+              <p className="text-sm text-neutral-500">Website</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <img
-            src="/images/case-study-1-img.png"
-            alt="Case study image"
-            className="aspect-square w-full"
-          />
-          <h3>
-            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
-          </h3>
-          <div className="flex gap-4">
-            <p className="text-sm text-neutral-500">OO-UX</p>
-            <p className="text-sm text-neutral-500">Website</p>
+          <div>
+            <a href="/my-work/border-animation-case-study">
+              <img
+                src="/images/case-study-1-image.png"
+                alt="Case study image"
+                className="aspect-square w-full"
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+            </h3>
+            <div className="flex gap-4">
+              <p className="text-sm text-neutral-500">OO-UX</p>
+              <p className="text-sm text-neutral-500">Website</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <img
-            src="/images/case-study-1-img.png"
-            alt="Case study image"
-            className="aspect-square w-full"
-          />
-          <h3>
-            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
-          </h3>
-          <div className="flex gap-4">
-            <p className="text-sm text-neutral-500">OO-UX</p>
-            <p className="text-sm text-neutral-500">Website</p>
+          <div>
+            <a href="/my-work/guldborgsund-zoo-case-study">
+              <img
+                src="/images/case-study-1-image.png"
+                alt="Case study image"
+                className="aspect-square w-full"
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+            </h3>
+            <div className="flex gap-4">
+              <p className="text-sm text-neutral-500">OO-UX</p>
+              <p className="text-sm text-neutral-500">Website</p>
+            </div>
           </div>
         </div>
       </Section>
