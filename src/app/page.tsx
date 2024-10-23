@@ -62,6 +62,39 @@ export default function HomePage() {
           <FontAwesomeIcon icon={faFigma} className="size-12" />
         </div>
       </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">My work</h2>
+        <div>
+          <img src="" alt="" className="aspect-square w-full" />
+          <h3>
+            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+          </h3>
+          <div className="flex gap-4">
+            <p className="text-sm text-neutral-500">OO-UX</p>
+            <p className="text-sm text-neutral-500">Website</p>
+          </div>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h3>
+            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+          </h3>
+          <div className="flex gap-4">
+            <p className="text-sm text-neutral-500">OO-UX</p>
+            <p className="text-sm text-neutral-500">Website</p>
+          </div>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h3>
+            Sejr og Davidsens dyrepension - Realiseret website til dyrepension
+          </h3>
+          <div className="flex gap-4">
+            <p className="text-sm text-neutral-500">OO-UX</p>
+            <p className="text-sm text-neutral-500">Website</p>
+          </div>
+        </div>
+      </Section>
       <BubbleSection index={0}>
         <div className="pb-6">
           <h2 className="text-xl font-bold">Web design</h2>
