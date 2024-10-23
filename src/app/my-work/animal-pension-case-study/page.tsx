@@ -87,7 +87,7 @@ export default function CaseStudyOne() {
             different user groups.
           </li>
           <li>
-            Object Map: Developed to ensure the structure of the platform's key
+            Object Map: Developed to ensure the structure of the platforms key
             objects.
           </li>
           <li>

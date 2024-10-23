@@ -69,7 +69,7 @@ export default function CaseStudyOne() {
             the structure of the platforms key objects.
           </li>
           <li>
-            <span className="font-bold">User Flows and CTA Matrix:</span>{" "}
+            <span className="font-bold">User Flows and CTA Matrix:</span>
             Sketched the most important actions users could take and how they
             navigated between objects.
           </li>
@@ -87,7 +87,7 @@ export default function CaseStudyOne() {
             different user groups.
           </li>
           <li>
-            Object Map: Developed to ensure the structure of the platform's key
+            Object Map: Developed to ensure the structure of the platforms key
             objects.
           </li>
           <li>
