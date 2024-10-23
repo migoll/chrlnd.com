@@ -11,6 +11,7 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -24,7 +25,9 @@ export default function HomePage() {
           />
         </div>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl">Creative front-end developer</h1>
+          <h1 className="font-bold text-7xl tracking-tight">
+            Creative front-end developer
+          </h1>
           <p>
             I build clean, responsive websites focused on clarity and user
             experience.
@@ -67,10 +70,12 @@ export default function HomePage() {
         <div className="flex flex-col gap-8">
           <div>
             <a href="/my-work/animal-pension-case-study">
-              <img
+              <Image
                 src="/images/case-study-1-image.png"
                 alt="Case study image"
                 className="aspect-square w-full"
+                width={640}
+                height={640}
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
@@ -83,10 +88,12 @@ export default function HomePage() {
           </div>
           <div>
             <a href="/my-work/border-animation-case-study">
-              <img
+              <Image
                 src="/images/case-study-1-image.png"
                 alt="Case study image"
                 className="aspect-square w-full"
+                width={640}
+                height={640}
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
@@ -99,10 +106,12 @@ export default function HomePage() {
           </div>
           <div>
             <a href="/my-work/guldborgsund-zoo-case-study">
-              <img
+              <Image
                 src="/images/case-study-1-image.png"
                 alt="Case study image"
                 className="aspect-square w-full"
+                width={640}
+                height={640}
               />
             </a>
             <h3 className="font-bold text-lg pt-2">
