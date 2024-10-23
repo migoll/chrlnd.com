@@ -20,3 +20,13 @@ p {
 p {
   @apply text-2xl font-medium;
 }
+
+li {
+  @apply text-lg font-medium;
+}
+
+h1,
+h2,
+h3 {
+  @apply tracking-tight;
+}
