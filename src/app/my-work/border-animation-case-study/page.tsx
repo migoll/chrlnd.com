@@ -27,10 +27,10 @@ export default function CaseStudyOne() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My role</h2>
         <p>
-          As the designer, I was responsible for researching crypto users'
-          needs, analyzing other transaction apps, and creating the
-          high-fidelity design. This involved researching the typical needs in
-          cryptocurrency apps and designing solutions that address them.
+          As the designer, I was responsible for researching crypto users needs,
+          analyzing other transaction apps, and creating the high-fidelity
+          design. This involved researching the typical needs in cryptocurrency
+          apps and designing solutions that address them.
         </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
