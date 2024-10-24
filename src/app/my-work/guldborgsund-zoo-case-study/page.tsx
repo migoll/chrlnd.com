@@ -33,8 +33,8 @@ export default function CaseStudyOne() {
             </div>
           </div>
           <p>
-            En platform der forbinder dyreejere og eksperter med fokus på
-            OOUX-processen for at sikre en brugercentreret oplevelse.
+            A new and improved website, with focus on content structure,
+            navigation and SEO optimization
           </p>
         </div>
       </Section>
