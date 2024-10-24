@@ -1,3 +1,6 @@
+// Next.js tror åbenbart at onClick på min alert længere nede i et component er et "server component", så use client gør at den del er et Client Component
+"use client";
+
 import { Section } from "@/components/section";
 import { BubbleSection } from "@/components/bubble-section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +15,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -52,7 +56,11 @@ export default function HomePage() {
           My work
         </h2>
         <div className="flex flex-col gap-8">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <a href="/my-work/animal-pension-case-study">
               <Image
                 src="/images/case-study-1-image.png"
@@ -70,8 +78,14 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">OO-UX</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
-          </div>
-          <div>
+          </motion.div>
+
+          {/* Second case study */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <a href="/my-work/border-animation-case-study">
               <Image
                 src="/images/case-study-two-image.png"
@@ -88,8 +102,14 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">Design</p>
               <p className="text-sm text-neutral-500">Application</p>
             </div>
-          </div>
-          <div>
+          </motion.div>
+
+          {/* Third case study */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <a href="/my-work/guldborgsund-zoo-case-study">
               <Image
                 src="/images/case-study-3-image.png"
@@ -106,7 +126,7 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">Wordpress API</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
