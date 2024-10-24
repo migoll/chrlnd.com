@@ -1,5 +1,6 @@
 import "./globals.css";
 import { TheHeader } from "@/components/the-header";
+import { TheFooter } from "@/components/the-footer";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { clsx } from "clsx";
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Section contentClassName="h-8" />
         <TheHeader />
         {children}
+        <TheFooter />
       </body>
     </html>
   );

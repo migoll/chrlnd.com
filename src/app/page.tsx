@@ -25,7 +25,7 @@ export default function HomePage() {
           />
         </div>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl tracking-tight">
+          <h1 className="font-bold text-4xl tracking-tight custom-sm:text-7xl">
             Creative front-end developer
           </h1>
           <p>
@@ -48,7 +48,71 @@ export default function HomePage() {
         </div>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
-        <h2 className="font-bold text-4xl">About</h2>
+        <h2 className="font-bold text-4xl" id="workSection">
+          My work
+        </h2>
+        <div className="flex flex-col gap-8">
+          <div>
+            <a href="/my-work/animal-pension-case-study">
+              <Image
+                src="/images/case-study-1-image.png"
+                alt="Case study image"
+                className="aspect-square mx-auto"
+                width={540}
+                height={540}
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Sejr og Davidsens Dyrepension - Realized website for animal
+              pension
+            </h3>
+            <div className="flex gap-4 pb-16">
+              <p className="text-sm text-neutral-500">OO-UX</p>
+              <p className="text-sm text-neutral-500">Website</p>
+            </div>
+          </div>
+          <div>
+            <a href="/my-work/border-animation-case-study">
+              <Image
+                src="/images/case-study-two-image.png"
+                alt="Case study image"
+                className="aspect-square object-contain"
+                width={640}
+                height={640}
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Jooser - Instant payment crypto app design
+            </h3>
+            <div className="flex gap-4 pb-16">
+              <p className="text-sm text-neutral-500">Design</p>
+              <p className="text-sm text-neutral-500">Application</p>
+            </div>
+          </div>
+          <div>
+            <a href="/my-work/guldborgsund-zoo-case-study">
+              <Image
+                src="/images/case-study-3-image.png"
+                alt="Case study image"
+                className="aspect-square w-full"
+                width={640}
+                height={640}
+              />
+            </a>
+            <h3 className="font-bold text-lg pt-2">
+              Guldborgsund Zoo og Have - Realized website for zoo
+            </h3>
+            <div className="flex gap-4 pb-16">
+              <p className="text-sm text-neutral-500">Wordpress API</p>
+              <p className="text-sm text-neutral-500">Website</p>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl" id="aboutSection">
+          About
+        </h2>
         <p>
           I’m Christian, a front-end developer with a good year of experience.
           My tools of choice are Figma, React, and Vue. I’m always refining my
@@ -67,66 +131,7 @@ export default function HomePage() {
           <FontAwesomeIcon icon={faFigma} className="size-12" />
         </div>
       </Section>
-      <Section contentClassName="py-32 flex gap-3 flex-col">
-        <h2 className="font-bold text-4xl">My work</h2>
-        <div className="flex flex-col gap-8">
-          <div>
-            <a href="/my-work/animal-pension-case-study">
-              <Image
-                src="/images/case-study-1-image.png"
-                alt="Case study image"
-                className="aspect-square mx-auto"
-                width={540}
-                height={540}
-              />
-            </a>
-            <h3 className="font-bold text-lg pt-2">
-              Sejr og Davidsens Dyrepension - Realized website for animal
-              pension
-            </h3>
-            <div className="flex gap-4">
-              <p className="text-sm text-neutral-500">OO-UX</p>
-              <p className="text-sm text-neutral-500">Website</p>
-            </div>
-          </div>
-          <div>
-            <a href="/my-work/border-animation-case-study">
-              <Image
-                src="/images/case-study-two-image.png"
-                alt="Case study image"
-                className="aspect-square object-contain"
-                width={640}
-                height={640}
-              />
-            </a>
-            <h3 className="font-bold text-lg pt-2">
-              Jooser - Instant payment crypto app design
-            </h3>
-            <div className="flex gap-4">
-              <p className="text-sm text-neutral-500">Design</p>
-              <p className="text-sm text-neutral-500">Application</p>
-            </div>
-          </div>
-          <div>
-            <a href="/my-work/guldborgsund-zoo-case-study">
-              <Image
-                src="/images/case-study-3-image.png"
-                alt="Case study image"
-                className="aspect-square w-full"
-                width={640}
-                height={640}
-              />
-            </a>
-            <h3 className="font-bold text-lg pt-2">
-              Guldborgsund Zoo og Have - Realized website for zoo
-            </h3>
-            <div className="flex gap-4">
-              <p className="text-sm text-neutral-500">Wordpress API</p>
-              <p className="text-sm text-neutral-500">Website</p>
-            </div>
-          </div>
-        </div>
-      </Section>
+
       <BubbleSection index={0}>
         <div className="pb-6">
           <h2 className="text-xl font-bold">Web design</h2>
@@ -147,7 +152,7 @@ export default function HomePage() {
           HTML, CSS, and then JS. Ended up using the framework Vue.
         </p>
       </BubbleSection>
-      <BubbleSection index={2}>
+      <BubbleSection index={2} contentClassName="mb-10">
         <div className="pb-6">
           <h2 className="text-xl font-bold">Frameworks</h2>
           <h3 className="text-neutral-500">Vue, React, TSX, Tailwind</h3>

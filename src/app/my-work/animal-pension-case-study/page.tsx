@@ -1,4 +1,5 @@
 import { Section } from "@/components/section";
+import Image from "next/image";
 
 export default function CaseStudyOne() {
   return (
@@ -39,9 +40,9 @@ export default function CaseStudyOne() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My role</h2>
         <p>
-          I had an extensive rol in this project, as there were a small team. my
-          main focus the OOUX process, which involved working on objects based
-          on our personas and developing the comprehensive object map.
+          I had an extensive role in this project, as we were a small team. My
+          main focus was the OOUX process, which involved working on objects,
+          based on our personas and developing the an object map.
         </p>
         <p>
           I also worked closely with user flows and ensured that both the design
@@ -49,6 +50,13 @@ export default function CaseStudyOne() {
         </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
+        <Image
+          src="/images/case-study-1-image.png"
+          alt="Case study image"
+          className="mx-auto"
+          width={540}
+          height={540}
+        />
         <h2 className="font-bold text-4xl">OOUX process</h2>
         <p>
           The project was based on OOUX (Object-Oriented UX), where we created
@@ -78,6 +86,13 @@ export default function CaseStudyOne() {
             needs and behavior patterns of different user groups.
           </li>
         </ul>
+        <Image
+          src="/images/ooux-model-image.png"
+          alt="Case study image"
+          className="mx-auto"
+          width={440}
+          height={360}
+        />
       </Section>
       <Section contentClassName="py-32 flex gap-6 flex-col">
         <h2 className="font-bold text-4xl">Technologies and solutions used</h2>
@@ -117,6 +132,13 @@ export default function CaseStudyOne() {
           Additionally, the results of our user flows are implemented which
           ensures users can quickly find the information they need.
         </p>
+        <Image
+          src="/images/S-og-D-mockup.png"
+          alt="Case study image"
+          className="mx-auto"
+          width={640}
+          height={360}
+        />
       </Section>
     </>
   );

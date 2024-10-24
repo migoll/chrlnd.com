@@ -12,6 +12,9 @@ const config: Config = {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
+      screens: {
+        "custom-sm": "706px",
+      },
     },
   },
   plugins: [],
