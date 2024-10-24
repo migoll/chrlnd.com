@@ -27,83 +27,60 @@ export default function CaseStudyOne() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My role</h2>
         <p>
-          I had an extensive rol in this project, as there were a small team. my
-          main focus the OOUX process, which involved working on objects based
-          on our personas and developing the comprehensive object map.
-        </p>
-        <p>
-          I also worked closely with user flows and ensured that both the design
-          and technical solutions in the code reflected the OOUX results.
+          As the designer, I was responsible for researching crypto users'
+          needs, analyzing other transaction apps, and creating the
+          high-fidelity design. This involved researching the typical needs in
+          cryptocurrency apps and designing solutions that address them.
         </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
-        <h2 className="font-bold text-4xl">OOUX process</h2>
-        <p>
-          The project was based on OOUX (Object-Oriented UX), where we created
-          an in-depth object structure based on our personas.
-        </p>
-        <p>
-          We first developed the object map, where we categorized and
-          prioritized objects like adoptable animals, training, and tips and
-          tricks. From there, we worked on user flows and a CTA matrix, which
-          supported the users journey on the platform.
-        </p>
-      </Section>
-      <Section contentClassName="py-32 flex gap-3 flex-col">
-        <h2 className="font-bold text-4xl">OOUX tools</h2>
+        <h2 className="font-bold text-4xl">Process</h2>
         <ul className="flex flex-col gap-4">
           <li>
-            <span className="font-bold">Object Map:</span> Developed to ensure
-            the structure of the platforms key objects.
+            <span className="font-bold">Research & Competitive Analysis:</span>
+            Focused on common crypto user needs like transaction speed,
+            security, and clarity. Reviewed apps like PayPal and MetaMask to
+            analyze how they handle payments and swaps.
           </li>
           <li>
-            <span className="font-bold">User Flows and CTA Matrix:</span>
-            Sketched the most important actions users could take and how they
-            navigated between objects.
+            <span className="font-bold">Design Approach: </span>I focused on
+            having a minimalist design to avoid overwhelming users, ensuring
+            that key actions like sending, swapping, and receiving are easily
+            accessible. The dark theme aligns with other typical crypto apps.
           </li>
           <li>
-            <span className="font-bold">Personas:</span> Used to define the
-            needs and behavior patterns of different user groups.
+            <span className="font-bold">Figma High-Fidelity Design: </span>
+            Created a natural interface for managing balances, transactions, and
+            asset swapping, with NFC integration for tap-to-pay functionality.
           </li>
         </ul>
       </Section>
-      <Section contentClassName="py-32 flex gap-6 flex-col">
-        <h2 className="font-bold text-4xl">Technologies and solutions used</h2>
-        <ul className="list-disc flex gap-2 max-w-[90%] mx-auto flex-col">
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">Design challenges</h2>
+        <ul className="flex flex-col gap-4">
           <li>
-            Personas: Used to define the needs and behavior patterns of
-            different user groups.
+            <span className="font-bold">NFC Payment Integration: </span>
+            Designing the UI around NFC payments required users knew when to
+            scan while maintaining a clean design.
           </li>
           <li>
-            Object Map: Developed to ensure the structure of the platforms key
-            objects.
-          </li>
-          <li>
-            User Flows and CTA Matrix: Sketched the most important actions users
-            could take and how they navigated between objects.
+            <span className="font-bold">Crypto Swaps: </span>
+            Providing a simple swapping interface without overwhelming users
+            with options was critical. Focused on keeping the choices visible
+            but precise
           </li>
         </ul>
-        <p>
-          One of the biggest challenges was ensuring that prioritized objects
-          (adoptable animals, training, tips, etc.) were visible and easily
-          accessible to users.
-        </p>
-        <p>
-          This was solved through a meticulous design process and optimized user
-          flows, which were mapped based on our object map.
-        </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">The result</h2>
         <p>
-          The final solution became a responsive platform where pet owners can
-          find information on adoption, training, and care of animals. The
-          platform makes it easy to find adoptable animals and includes articles
-          with tips and tricks on pet care.
+          The app provides a straight forward user experience for cryptocurrency
+          transactions, with a focus on minimalism and the actions.
         </p>
         <p>
-          Additionally, the results of our user flows are implemented which
-          ensures users can quickly find the information they need.
+          This also meant i had to focus on a simple dashboard, with easy access
+          to send, recieve and swap assets. And ofc the NFC integration for a
+          quick, modern and contactless payment
         </p>
       </Section>
     </>

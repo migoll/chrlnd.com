@@ -40,9 +40,9 @@ export default function CaseStudyOne() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My role</h2>
         <p>
-          I had an extensive role in this project, as we were a small team. My
-          main focus was the OOUX process, which involved working on objects,
-          based on our personas and developing the an object map.
+          I had an large role in this project, as we were a small team. My main
+          focus was the OOUX process, which involved working on objects, based
+          on our personas and developing the an object map.
         </p>
         <p>
           I also worked closely with user flows and ensured that both the design
@@ -113,10 +113,10 @@ export default function CaseStudyOne() {
         <p>
           One of the biggest challenges was ensuring that prioritized objects
           (adoptable animals, training, tips, etc.) were visible and easily
-          accessible to users.
+          accessible to our users.
         </p>
         <p>
-          This was solved through a meticulous design process and optimized user
+          This was solved through a thorough design process and optimized user
           flows, which were mapped based on our object map.
         </p>
       </Section>
