@@ -1,3 +1,7 @@
+"use client";
+// scroll animation fra kilde: https://www.framer.com/motion/scroll-animations/
+import { motion } from "framer-motion";
+
 // clsx sørger for at jeg kan have to forskellige class strings på samme element fx containerClassName og contentClassName
 import { clsx } from "clsx";
 import { ReactNode } from "react";
@@ -12,11 +16,14 @@ export function Section(props: SectionProps) {
   const { children, contentClassName, containerClassName } = props;
 
   return (
-    <div
+    <motion.div
       className={clsx(
         "border-b border-neutral-950 last:border-b-0 border-opacity-10",
         containerClassName
       )}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <div
         className={clsx(
@@ -26,6 +33,6 @@ export function Section(props: SectionProps) {
       >
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 }
