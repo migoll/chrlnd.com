@@ -17,11 +17,14 @@ export function Section(props: SectionProps) {
   const { children, contentClassName, containerClassName } = props;
 
   return (
-    <div
+    <motion.div
       className={clsx(
         "border-b border-neutral-950 last:border-b-0 border-opacity-10",
         containerClassName
       )}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <div
         className={clsx(
@@ -31,6 +34,6 @@ export function Section(props: SectionProps) {
       >
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 }
