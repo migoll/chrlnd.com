@@ -15,6 +15,9 @@ const config: Config = {
       screens: {
         "custom-sm": "706px",
       },
+      borderWidth: {
+        "3": "3px",
+      },
     },
   },
   plugins: [],

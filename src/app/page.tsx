@@ -38,7 +38,7 @@ export default function HomePage() {
         </div>
         <div className="flex gap-6 items-center">
           <a href="mailto:chris.lund02@gmail.com">
-            <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5 hover:bg-neutral-900 hover:text-neutral-100">
+            <button className="text-2xl font-medium border-2 border-black rounded-full py-3 px-5 hover:bg-neutral-900 hover:text-neutral-100">
               Reach out
             </button>
           </a>
