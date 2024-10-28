@@ -5,13 +5,13 @@ import { Section } from "./section";
 export function TheFooter() {
   return (
     <Section contentClassName="p-8 font-medium">
-      <nav className="flex justify-between items-center">
+      <nav className="flex justify-between items-center flex-col custom-sm:flex-row">
         <div className="link">
           <a href="/">
             <p className="text-xl hover:text-neutral-600">christian lund</p>
           </a>
         </div>
-        <div className="navbar flex space-x-8 items-center">
+        <div className="navbar flex items-center flex-col custom-sm:flex-row custom-sm:space-x-8">
           <a href="mailto:chris.lund02@gmail.com">
             <p className="text-xl hover:text-neutral-600">
               chris.lund02@gmail.com
