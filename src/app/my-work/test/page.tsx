@@ -15,7 +15,6 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
