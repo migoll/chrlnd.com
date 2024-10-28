@@ -15,7 +15,6 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -39,15 +38,21 @@ export default function HomePage() {
         </div>
         <div className="flex gap-6 items-center">
           <a href="mailto:chris.lund02@gmail.com">
-            <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5">
+            <button className="text-2xl font-medium border-2 border-black rounded-full py-2 px-5 hover:bg-neutral-900 hover:text-neutral-100">
               Reach out
             </button>
           </a>
           <a href="https://www.linkedin.com/in/christian-lund-2125322b8/">
-            <FontAwesomeIcon icon={faLinkedin} className="size-9" />
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="size-9 hover:text-neutral-600"
+            />
           </a>
           <a href="https://github.com/migoll">
-            <FontAwesomeIcon icon={faGithub} className="size-9" />
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="size-9 hover:text-neutral-600"
+            />
           </a>
         </div>
       </Section>
@@ -56,11 +61,7 @@ export default function HomePage() {
           My work
         </h2>
         <div className="flex flex-col gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <a href="/my-work/animal-pension-case-study">
               <Image
                 src="/images/case-study-1-image.png"
@@ -78,14 +79,8 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">OO-UX</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
-          </motion.div>
-
-          {/* Second case study */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          </div>
+          <div>
             <a href="/my-work/border-animation-case-study">
               <Image
                 src="/images/case-study-two-image.png"
@@ -102,14 +97,8 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">Design</p>
               <p className="text-sm text-neutral-500">Application</p>
             </div>
-          </motion.div>
-
-          {/* Third case study */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          </div>
+          <div>
             <a href="/my-work/guldborgsund-zoo-case-study">
               <Image
                 src="/images/case-study-3-image.png"
@@ -126,7 +115,7 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500">Wordpress API</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
