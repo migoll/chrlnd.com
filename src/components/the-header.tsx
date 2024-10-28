@@ -10,18 +10,21 @@ export function TheHeader() {
       <nav className="flex justify-between items-center">
         <div className="link">
           <a href="/">
-            <p className="text-xl">chrlnd.com</p>
+            <p className="text-xl hover:text-neutral-600">chrlnd.com</p>
           </a>
         </div>
         <div className="navbar flex space-x-8 items-center">
           <a href="/#workSection">
-            <p className="text-xl">work</p>
+            <p className="text-xl hover:text-neutral-600">work</p>
           </a>
-          <Link href="/#aboutSection" className="text-xl">
+          <Link
+            href="/#aboutSection"
+            className="text-xl hover:text-neutral-600"
+          >
             about me
           </Link>
           <span
-            className="material-symbols-outlined cursor-pointer"
+            className="material-symbols-outlined cursor-pointer hover:text-neutral-600"
             onClick={() => alert("Not implemented yet :)")}
           >
             light_mode

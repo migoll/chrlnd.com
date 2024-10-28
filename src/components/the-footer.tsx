@@ -8,14 +8,16 @@ export function TheFooter() {
       <nav className="flex justify-between items-center">
         <div className="link">
           <a href="/">
-            <p className="text-xl">christian lund</p>
+            <p className="text-xl hover:text-neutral-600">christian lund</p>
           </a>
         </div>
         <div className="navbar flex space-x-8 items-center">
           <a href="mailto:chris.lund02@gmail.com">
-            <p className="text-xl">chris.lund02@gmail.com</p>
+            <p className="text-xl hover:text-neutral-600">
+              chris.lund02@gmail.com
+            </p>
           </a>
-          <p className="text-xl">+45 42415990</p>
+          <p className="text-xl hover:text-neutral-600">+45 42415990</p>
         </div>
       </nav>
     </Section>

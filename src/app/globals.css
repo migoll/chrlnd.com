@@ -12,6 +12,15 @@ html {
   scroll-behavior: smooth;
 }
 
+a,
+p,
+i,
+svg,
+link,
+button {
+  transition: all 0.2s ease;
+}
+
 h1,
 h2,
 h3,
