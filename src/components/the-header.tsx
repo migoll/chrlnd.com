@@ -3,8 +3,24 @@
 
 import Link from "next/link";
 import { Section } from "./section";
+import { toggleTheme } from "@/components/toggleTheme";
 
+import { useState, useEffect } from "react";
+
+// handleToggleTheme dark mode function inspireret af https://tailwindcss.com/docs/dark-mode#supporting-system-preference-and-manual-selection
 export function TheHeader() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    setIsDarkMode(theme === "dark");
+  }, []);
+
+  const handleToggleTheme = () => {
+    toggleTheme();
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <Section contentClassName="p-8 font-medium">
       <nav className="flex justify-between items-center">
@@ -25,9 +41,9 @@ export function TheHeader() {
           </Link>
           <span
             className="material-symbols-outlined cursor-pointer hover:text-neutral-600"
-            onClick={() => alert("Not implemented yet :)")}
+            onClick={handleToggleTheme}
           >
-            light_mode
+            {isDarkMode ? "light_mode" : "dark_mode"}
           </span>
         </div>
       </nav>
