@@ -28,12 +28,22 @@ export function BubbleSection(props: BubbleSectionProps) {
         containerClassName
       )}
     >
-      <div className={clsx("w-[1px] h-28 bg-gray-300", lineClassName)}></div>
-      <p className="text-base">{years[index]}</p>
-      <div className={clsx("w-[1px] h-10 bg-gray-300", lineClassName)}></div>
       <div
         className={clsx(
-          "border rounded-full py-16 flex justify-center items-center flex-col text-center max-w-screen-sm w-full box-content px-8",
+          "w-[1px] h-28 bg-neutral-950 bg-opacity-10 dark:bg-white dark:bg-opacity-[12%]",
+          lineClassName
+        )}
+      ></div>
+      <p className="text-base">{years[index]}</p>
+      <div
+        className={clsx(
+          "w-[1px] h-10 bg-neutral-950 bg-opacity-10 dark:bg-white dark:bg-opacity-[12%]",
+          lineClassName
+        )}
+      ></div>
+      <div
+        className={clsx(
+          "border rounded-full py-16 flex justify-center items-center flex-col text-center max-w-screen-sm w-full box-content px-8 dark:border-white dark:border-opacity-[12%]",
           contentClassName
         )}
       >
