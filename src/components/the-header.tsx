@@ -3,22 +3,14 @@
 
 import Link from "next/link";
 import { Section } from "./section";
-import { toggleTheme } from "@/components/toggleTheme";
-
-import { useState, useEffect } from "react";
+import { useTheme } from "./theme";
 
 // handleToggleTheme dark mode function inspireret af https://tailwindcss.com/docs/dark-mode#supporting-system-preference-and-manual-selection
 export function TheHeader() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    setIsDarkMode(theme === "dark");
-  }, []);
+  const { theme, setTheme } = useTheme();
 
   const handleToggleTheme = () => {
-    toggleTheme();
-    setIsDarkMode((prevMode) => !prevMode);
+    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -43,7 +35,7 @@ export function TheHeader() {
             className="material-symbols-outlined cursor-pointer hover:text-neutral-600"
             onClick={handleToggleTheme}
           >
-            {isDarkMode ? "light_mode" : "dark_mode"}
+            {theme === "dark" ? "light_mode" : "dark_mode"}
           </span>
         </div>
       </nav>

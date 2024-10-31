@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { clsx } from "clsx";
 import { Section } from "@/components/section";
+import { ThemeProvider } from "@/components/theme";
 
 export const metadata = {
   title: "chrlnd.com",
@@ -19,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(GeistSans.variable, GeistMono.variable)}>
       <body>
-        <Section contentClassName="h-8" />
-        <TheHeader />
-        {children}
-        <TheFooter />
+        <ThemeProvider>
+          <Section contentClassName="h-8" />
+          <TheHeader />
+          {children}
+          <TheFooter />
+        </ThemeProvider>
       </body>
     </html>
   );
