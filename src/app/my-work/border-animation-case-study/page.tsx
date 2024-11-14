@@ -11,8 +11,10 @@ export default function CaseStudyOne() {
         </a>
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl">Crypto transaction app</h1>
-          <div className="flex justify-between w-[60%]">
+          <h1 className="font-bold text-4xl tracking-tight custom-sm:text-7xl">
+            Crypto transaction app
+          </h1>
+          <div className="flex justify-between w-[60%] gap-8">
             <div>
               <p className="font-semibold">Role</p>
               <p className="font-normal text-lg">OOUX design, front-end</p>

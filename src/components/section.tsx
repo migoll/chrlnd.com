@@ -17,13 +17,13 @@ export function Section(props: SectionProps) {
   return (
     <div
       className={clsx(
-        "border-b border-neutral-950 last:border-b-0 border-opacity-10 dark:border-white dark:border-opacity-[12%] mx-auto",
+        "border-b border-neutral-950 last:border-b-0 border-opacity-10 dark:border-white dark:border-opacity-[12%]",
         containerClassName
       )}
     >
       <div
         className={clsx(
-          "w-full max-w-screen-sm mx-auto border-x border-neutral-950 border-opacity-10 box-content px-8 dark:border-white dark:border-opacity-[12%]",
+          " max-w-full mx-auto border-x border-neutral-950 border-opacity-10 box-content px-8 dark:border-white dark:border-opacity-[12%] custom-sm:max-w-screen-sm custom-sm:w-full",
           contentClassName
         )}
       >
