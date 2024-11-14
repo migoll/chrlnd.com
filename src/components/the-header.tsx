@@ -1,7 +1,5 @@
 // Next.js tror åbenbart at onClick på min alert længere nede i et component er et "server component", så use client gør at den del er et Client Component
 "use client";
-
-import Link from "next/link";
 import { Section } from "./section";
 import { useTheme } from "./theme";
 
