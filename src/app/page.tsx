@@ -123,21 +123,28 @@ export default function HomePage() {
           About
         </h2>
         <p>
-          I’m Christian, a front-end developer with a good year of experience.
-          My tools of choice are Figma, React, and Vue. I’m always refining my
-          process and learning new things.
+          I’m Christian, a front-end developer and UI designer from Denmark with
+          a passion for problem-solving and everything tech and AI. I thrive on
+          continuous learning and aim to be at least 1% better every day.
         </p>
-        <p>Less noise, more signal. Focus on what works.</p>
+        <p>
+          I enjoy diving into everything new, whether it’s discovering the
+          latest trends or trying a new type of wine or food. When I’m not
+          working, you’ll find me gaming or looking at crypto graphs.
+        </p>
+        <p className="pt-6">
+          My approach: Less noise, more signal. Focus on what works.
+        </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My skills</h2>
-        <div className="flex justify-between my-3">
-          <FontAwesomeIcon icon={faHtml5} className="size-12" />
-          <FontAwesomeIcon icon={faCss3} className="size-12" />
-          <FontAwesomeIcon icon={faJsSquare} className="size-12" />
-          <FontAwesomeIcon icon={faVuejs} className="size-12" />
-          <FontAwesomeIcon icon={faReact} className="size-12" />
-          <FontAwesomeIcon icon={faFigma} className="size-12" />
+        <div className="grid grid-cols-3 custom-sm:grid-cols-6 gap-3 my-3">
+          <FontAwesomeIcon icon={faHtml5} className="size-12 mx-auto" />
+          <FontAwesomeIcon icon={faCss3} className="size-12 mx-auto" />
+          <FontAwesomeIcon icon={faJsSquare} className="size-12 mx-auto" />
+          <FontAwesomeIcon icon={faVuejs} className="size-12 mx-auto" />
+          <FontAwesomeIcon icon={faReact} className="size-12 mx-auto" />
+          <FontAwesomeIcon icon={faFigma} className="size-12 mx-auto" />
         </div>
       </Section>
 

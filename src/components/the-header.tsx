@@ -21,16 +21,13 @@ export function TheHeader() {
             <p className="text-xl hover:text-neutral-600">chrlnd.com</p>
           </a>
         </div>
-        <div className="navbar flex space-x-8 items-center">
+        <div className="navbar flex flex-row space-x-8 items-center">
           <a href="/#workSection">
             <p className="text-xl hover:text-neutral-600">work</p>
           </a>
-          <Link
-            href="/#aboutSection"
-            className="text-xl hover:text-neutral-600"
-          >
-            about me
-          </Link>
+          <a href="/#aboutSection">
+            <p className="text-xl hover:text-neutral-600">about me</p>
+          </a>
           <span
             className="material-symbols-outlined cursor-pointer hover:text-neutral-600"
             onClick={handleToggleTheme}
