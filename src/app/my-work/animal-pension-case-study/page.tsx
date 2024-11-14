@@ -12,8 +12,10 @@ export default function CaseStudyOne() {
         </a>
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
-          <h1 className="font-bold text-7xl">Sejr og Davidsens Dyrepension</h1>
-          <div className="flex justify-between w-[80%]">
+          <h1 className="font-bold text-4xl tracking-tight custom-sm:text-7xl">
+            Sejr og Davidsens Dyrepension
+          </h1>
+          <div className="flex gap-8 justify-between w-[80%]">
             <div>
               <p className="font-semibold">Client</p>
               <p className="font-normal text-lg">Sejr og davidsen</p>
