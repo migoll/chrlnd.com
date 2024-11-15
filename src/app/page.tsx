@@ -57,64 +57,64 @@ export default function HomePage() {
         </div>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
-        <h2 className="font-bold text-4xl" id="workSection">
+        <h2 className="font-bold text-4xl pb-4" id="workSection">
           My work
         </h2>
         <div className="flex flex-col gap-8">
           <div>
-            <a href="/my-work/animal-pension-case-study">
-              <Image
-                src="/images/case-study-1-image.png"
-                alt="Case study image"
-                className="aspect-square mx-auto"
-                width={540}
-                height={540}
-              />
-            </a>
             <h3 className="font-bold text-lg pt-2">
               Sejr og Davidsens Dyrepension - Realized website for animal
               pension
             </h3>
-            <div className="flex gap-4 pb-16">
+            <div className="flex gap-4 pb-8">
               <p className="text-sm text-neutral-500">OO-UX</p>
               <p className="text-sm text-neutral-500">Website</p>
             </div>
+            <a href="/my-work/animal-pension-case-study">
+              <Image
+                src="/images/case-study-1-image.png"
+                alt="Case study image"
+                className="aspect-square mx-auto mb-8"
+                width={540}
+                height={540}
+              />
+            </a>
           </div>
           <div>
             <a href="/my-work/border-animation-case-study">
+              <h3 className="font-bold text-lg pt-2">
+                Jooser - Instant payment crypto app design
+              </h3>
+              <div className="flex gap-4 pb-16">
+                <p className="text-sm text-neutral-500">Design</p>
+                <p className="text-sm text-neutral-500">Application</p>
+              </div>
               <Image
                 src="/images/case-study-two-image.png"
                 alt="Case study image"
-                className="aspect-square object-contain"
+                className="aspect-square object-contain mb-8"
                 width={640}
                 height={640}
               />
             </a>
-            <h3 className="font-bold text-lg pt-2">
-              Jooser - Instant payment crypto app design
-            </h3>
-            <div className="flex gap-4 pb-16">
-              <p className="text-sm text-neutral-500">Design</p>
-              <p className="text-sm text-neutral-500">Application</p>
-            </div>
           </div>
           <div>
             <a href="/my-work/guldborgsund-zoo-case-study">
+              <h3 className="font-bold text-lg pt-2">
+                Guldborgsund Zoo og Have - Realized website for zoo
+              </h3>
+              <div className="flex gap-4 pb-16">
+                <p className="text-sm text-neutral-500">Wordpress API</p>
+                <p className="text-sm text-neutral-500">Website</p>
+              </div>
               <Image
                 src="/images/case-study-3-image.png"
                 alt="Case study image"
-                className="aspect-square w-full"
-                width={640}
-                height={640}
+                className="mx-auto"
+                width={440}
+                height={440}
               />
             </a>
-            <h3 className="font-bold text-lg pt-2">
-              Guldborgsund Zoo og Have - Realized website for zoo
-            </h3>
-            <div className="flex gap-4 pb-16">
-              <p className="text-sm text-neutral-500">Wordpress API</p>
-              <p className="text-sm text-neutral-500">Website</p>
-            </div>
           </div>
         </div>
       </Section>

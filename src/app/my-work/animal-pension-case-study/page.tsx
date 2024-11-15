@@ -50,8 +50,6 @@ export default function CaseStudyOne() {
           I also worked closely with user flows and ensured that both the design
           and technical solutions in the code reflected the OOUX results.
         </p>
-      </Section>
-      <Section contentClassName="py-32 flex gap-3 flex-col">
         <Image
           src="/images/case-study-1-image.png"
           alt="Case study image"
@@ -59,6 +57,8 @@ export default function CaseStudyOne() {
           width={540}
           height={540}
         />
+      </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">OOUX process</h2>
         <p>
           The project was based on OOUX (Object-Oriented UX), where we created
@@ -70,6 +70,13 @@ export default function CaseStudyOne() {
           tricks. From there, we worked on user flows and a CTA matrix, which
           supported the users journey on the platform.
         </p>
+        <Image
+          src="/images/Sejr&D-CTA-matrix.png"
+          alt="Case study image"
+          className="mx-auto"
+          width={640}
+          height={540}
+        />
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">OOUX tools</h2>
@@ -121,6 +128,13 @@ export default function CaseStudyOne() {
           This was solved through a thorough design process and optimized user
           flows, which were mapped based on our object map.
         </p>
+        <Image
+          src="/images/Sejr&D-userflow.png"
+          alt="Case study image"
+          className="mx-auto"
+          width={640}
+          height={540}
+        />
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">The result</h2>
