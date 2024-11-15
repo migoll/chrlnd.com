@@ -1,4 +1,5 @@
 import { Section } from "@/components/section";
+import Image from "next/image";
 
 export default function CaseStudyOne() {
   return (
@@ -36,7 +37,7 @@ export default function CaseStudyOne() {
           </div>
           <p>
             A new and improved website, with focus on content structure,
-            navigation and SEO optimization
+            navigation and SEO optimization.
           </p>
         </div>
       </Section>
@@ -49,7 +50,7 @@ export default function CaseStudyOne() {
         </p>
         <p>
           I also worked alot with the coding on HTML, CSS and JS, with focus on
-          SEO optimization based on SEO-crawler results
+          SEO optimization based on SEO-crawler results.
         </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
@@ -64,6 +65,13 @@ export default function CaseStudyOne() {
           other sections, tested prototypes with think-aloud tests and
           5-second-tests to optimize UX.
         </p>
+        <Image
+          src="/images/G-zoo-img-1.png"
+          alt="Case study image"
+          className="w-full"
+          width={440}
+          height={440}
+        />
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">Technologies used</h2>
@@ -82,6 +90,13 @@ export default function CaseStudyOne() {
             SEO-crawler analyses.
           </li>
         </ul>
+        <Image
+          src="/images/case-study-3-img-2.png"
+          alt="Case study image"
+          className="w-full"
+          width={440}
+          height={440}
+        />
       </Section>
       <Section contentClassName="py-32 flex gap-6 flex-col">
         <h2 className="font-bold text-4xl">Challenges and solutions</h2>
@@ -102,6 +117,13 @@ export default function CaseStudyOne() {
           experience for our users, that can now find information about animals,
           tickets and events in the zoo.
         </p>
+        <Image
+          src="/images/case-study-3-restult.png"
+          alt="Case study image"
+          className="w-full"
+          width={440}
+          height={440}
+        />
       </Section>
     </>
   );
