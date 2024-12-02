@@ -42,13 +42,13 @@ export default function CaseStudyOne() {
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">My role</h2>
         <p>
-          I had an large role in this project, as we were a small team. My main
-          focus was the OOUX process, which involved working on objects, based
-          on our personas and developing the an object map.
+          I played a significant role in this project, as we were a small team.
+          My main focus was the OOUX process, where I worked on objects based on
+          our personas and developed an object map.
         </p>
         <p>
-          I also worked closely with user flows and ensured that both the design
-          and technical solutions in the code reflected the OOUX results.
+          Additionally, I collaborated on user flows and ensured that both the
+          design and technical solutions in the code reflected the OOUX results.
         </p>
         <Image
           src="/images/case-study-1-image.png"
@@ -57,6 +57,22 @@ export default function CaseStudyOne() {
           width={540}
           height={540}
         />
+      </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">User research and insights</h2>
+        <p>
+          The foundation for the project was based on a detailed project brief
+          that provided comprehensive information and data about user needs and
+          behaviors. This brief included pre-made personas representing various
+          user groups, such as pet owners and adoption centers, which we used as
+          the basis for our work.
+        </p>
+        <p>
+          These personas helped us understand the users' goals and challenges
+          and guided our decisions throughout the project. This was the base
+          research we had about the user, which lead us into the OOUX process,
+          which focused on the relations between objects.
+        </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">OOUX process</h2>
@@ -68,7 +84,8 @@ export default function CaseStudyOne() {
           We first developed the object map, where we categorized and
           prioritized objects like adoptable animals, training, and tips and
           tricks. From there, we worked on user flows and a CTA matrix, which
-          supported the users journey on the platform.
+          supported the users journey on the platform. This lead to alot of the
+          data for our content.
         </p>
         <Image
           src="/images/Sejr&D-CTA-matrix.png"
@@ -103,6 +120,27 @@ export default function CaseStudyOne() {
           height={360}
         />
       </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">User testing</h2>
+        <p>
+          Once the prototype was developed, usability testing was conducted with
+          five users. Feedback from these tests helped identify challenges in
+          navigation and content accessibility. Based on this input, adjustments
+          were made to the navigation structure, and call-to-action elements
+          were enhanced to make them more intuitive and user-friendly.
+        </p>
+      </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">Content</h2>
+        <p>
+          The platform’s content was structured around the information provided
+          in the brief and aligned with the personas’ needs. An object map was
+          created to categorize and prioritize key elements like adoptable
+          animals, training programs, and care tips. This structured approach
+          ensured that all important content was easily accessible and relevant
+          to the target audience.
+        </p>
+      </Section>
       <Section contentClassName="py-32 flex gap-6 flex-col">
         <h2 className="font-bold text-4xl">Technologies and solutions used</h2>
         <ul className="list-disc flex gap-2 max-w-[90%] mx-auto flex-col">
@@ -135,6 +173,18 @@ export default function CaseStudyOne() {
           width={640}
           height={540}
         />
+      </Section>
+      <Section contentClassName="py-32 flex gap-3 flex-col">
+        <h2 className="font-bold text-4xl">Design and final product</h2>
+        <p>
+          The design was crafted to support both the insights from the project
+          brief and the requirements of the OOUX process, based on all of our
+          prior research about dog owners and adopters. User flows and a CTA
+          matrix were developed to guide users through the platform, ensuring
+          they could complete their tasks effortlessly. The responsive design
+          reflects a professional and trustworthy tone, using clean layouts and
+          a focus on clarity.
+        </p>
       </Section>
       <Section contentClassName="py-32 flex gap-3 flex-col">
         <h2 className="font-bold text-4xl">The result</h2>
