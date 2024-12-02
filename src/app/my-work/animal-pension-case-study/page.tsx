@@ -68,8 +68,8 @@ export default function CaseStudyOne() {
           the basis for our work.
         </p>
         <p>
-          These personas helped us understand the users' goals and challenges
-          and guided our decisions throughout the project. This was the base
+          These personas helped us understand the users goals and challenges and
+          guided our decisions throughout the project. This was the base
           research we had about the user, which lead us into the OOUX process,
           which focused on the relations between objects.
         </p>
