@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-black: #060606;
+  --primary-white: #faf9f6;
+
+  --secondary-main: #1f9586;
+
+  --neutral-1: #1a1a1a;
+  --neutral-2: #374151;
+  --neutral-3: #6b7280;
+  --neutral-4: #e5e7eb;
+  --neutral-5: #f8fafc;
+  --neutral-6: #ffffff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 800;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.25rem;
+  margin-block: 3rem 0rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+
+button,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.center-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider-hr {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.2;
+  max-width: 100%;
+}
+
+.reverse-button-black {
+  background: none;
+  border: 3px solid var(--primary-black);
+  color: var(--primary-black);
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.reverse-button-white {
+  background: none;
+  border: 3px solid var(--primary-white);
+  color: var(--primary-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.black-button {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  border: 3px solid var(--primary-black);
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  min-width: 150px;
+  min-height: 40px;
+}
