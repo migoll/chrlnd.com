@@ -88,15 +88,31 @@
     />
   </section>
   <section class="forside-sponsors center-section">
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-  </section>
+  <div class="kompetencer-logoer-container">
+    <div class="kompetence-logoer">
+      <div class="logos-slide">
+        <img src="~assets/images/DLK-sponsors/Rectangle71.png" alt="Logo for sponsor 1" />
+        <img src="~assets/images/DLK-sponsors/Rectangle72.png" alt="Logo for sponsor 2" />
+        <img src="~assets/images/DLK-sponsors/Rectangle73.png" alt="Logo for sponsor 3" />
+        <img src="~assets/images/DLK-sponsors/Rectangle74.png" alt="Logo for sponsor 4" />
+        <img src="~assets/images/DLK-sponsors/Rectangle75.png" alt="Logo for sponsor 5" />
+        <img src="~assets/images/DLK-sponsors/Rectangle76.png" alt="Logo for sponsor 6" />
+        <img src="~assets/images/DLK-sponsors/Rectangle77.png" alt="Logo for sponsor 7" />
+        <img src="~assets/images/DLK-sponsors/Rectangle78.png" alt="Logo for sponsor 8" />
+      </div>
+      <div class="logos-slide">
+        <img src="~assets/images/DLK-sponsors/Rectangle71.png" alt="Logo for sponsor 1" />
+        <img src="~assets/images/DLK-sponsors/Rectangle72.png" alt="Logo for sponsor 2" />
+        <img src="~assets/images/DLK-sponsors/Rectangle73.png" alt="Logo for sponsor 3" />
+        <img src="~assets/images/DLK-sponsors/Rectangle74.png" alt="Logo for sponsor 4" />
+        <img src="~assets/images/DLK-sponsors/Rectangle75.png" alt="Logo for sponsor 5" />
+        <img src="~assets/images/DLK-sponsors/Rectangle76.png" alt="Logo for sponsor 6" />
+        <img src="~assets/images/DLK-sponsors/Rectangle77.png" alt="Logo for sponsor 7" />
+        <img src="~assets/images/DLK-sponsors/Rectangle78.png" alt="Logo for sponsor 8" />
+      </div>
+    </div>
+  </div>
+</section>
   <section class="forside-nyhedsbrev">
     <div class="forside-nyhedsbrev center-section">
       <h3>Vores Nyhedsbrev</h3>
@@ -105,19 +121,51 @@
         begivenheder, udstillinger og unikke tilbud.
       </p>
       <div class="tilmeld-container">
-        <input
-          type="email"
-          placeholder="john_doe@mail.com"
-          class="email-input"
-        />
-        <button class="tilmeld-button">Tilmeld</button>
-      </div>
+    <input
+      v-if="!emailSent"
+      v-model="email"
+      type="email"
+      placeholder="dronninglund@mail.com..."
+      class="email-input"
+    />
+    <button
+      v-if="!emailSent"
+      @click="tilmeld"
+      class="tilmeld-button"
+    >
+      Tilmeld
+    </button>
+    <p v-if="emailSent" class="confirmation-message">
+      Tak for din registrering! Det betyder meget for os.
+    </p>
+  </div>
     </div>
   </section>
   <div class="divider-hr"></div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  data() {
+    return {
+      email: '', // Tom string der der holder brugerens indtastede mail
+      emailSent: false, // BOolean der holder styr på om emailen er blevet sendt
+    };
+  },
+  methods: {
+    tilmeld() {
+      // Tjekker om mailen indeholder "@"
+      if (this.email.includes('@')) {
+        // Hvis mailen er gyldig, bliver emailSent true
+        this.emailSent = true;
+        //ellers vises error
+      } else {
+        alert('Indtast venligst en gyldig emailadresse.');
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .forside-hero {
@@ -236,7 +284,6 @@
   flex-grow: 1;
   object-fit: contain;
   max-height: 200px;
-  max-width: 100%;
   padding-block: 2rem;
 }
 
@@ -260,8 +307,18 @@
   margin-top: -88px;
   z-index: 999;
   position: absolute;
-  right: 0;
+  right: -100%;
   left: auto;
+  animation: slideInBoks 2s forwards ease-in-out;
+}
+
+@keyframes slideInBoks {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 .åbningstider-box li {
@@ -401,4 +458,37 @@
     padding-block: 3rem;
   }
 }
+
+.kompetence-logoer-container {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.kompetence-logoer {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    margin-top: 2rem;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 40s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 0 50px;
+}
+
+
 </style>

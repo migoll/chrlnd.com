@@ -39,7 +39,6 @@
       </div>
     </div>
 
-    <!-- Scroll to Top button -->
     <button 
       v-show="showScrollTopButton" 
       class="scroll-to-top-btn" 
@@ -54,33 +53,36 @@
 export default {
   data() {
     return {
-      posts: [],
-      loading: true,
-      showScrollTopButton: false, // Track visibility of the button
+      posts: [], // Array der indeholder de fetchede posts
+      loading: true, // Boolean der indikerer load
+      showScrollTopButton: false, // Boolean til at vise eller skjule scroll til top knappen
     };
   },
   methods: {
+    // Henter posts fra wordpress api
     async fetchPosts() {
       try {
+        // fetcher posts fra specifik kategori
         const response = await fetch(
           "https://dronninglund-kunstcenter.laustsen.info/wp-json/wp/v2/posts?categories=5"
-        );
-        const data = await response.json();
-        this.posts = data;
+        ); 
+        const data = await response.json(); // konverterer resonse til json
+        this.posts = data; // gemmer de fetchede posts i "posts"
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching posts:", error); //logger eventuelle fejl
       } finally {
-        this.loading = false;
+        this.loading = false; // fortæller om data load er færdigt
       }
     },
+    // Åbner post i et nyt vindue
     openPostInNewWindow(postId) {
-      const baseURL = window.location.origin;
-      const newPostURL = `${baseURL}/udstilling/${postId}`;
-      const newWindow = window.open(newPostURL, "_blank", "width=800,height=600");
+      const baseURL = window.location.origin; //henter base url
+      const newPostURL = `${baseURL}/udstilling/${postId}`; // ændrer url baseret på ID
+      const newWindow = window.open(newPostURL, "_blank", "width=800,height=600"); // åbner et nyt vindue med det nye ID
       if (!newWindow) {
-        console.error("Failed to open a new window. Please allow popups for this site.");
+        console.error("Failed to open a new window. Please allow popups for this site."); // logger fejl hvis noget ikke virker
       }
-    },
+    }, // scroll to top method, med lidt styling
     scrollToTop() {
       window.scrollTo({
         top: 0,
@@ -88,26 +90,26 @@ export default {
       });
     },
     handleScroll() {
-      this.showScrollTopButton = window.scrollY > 300; // Show button after scrolling 300px
+      this.showScrollTopButton = window.scrollY > 300; // viser scroll to top knappen hvis der er scrolled mere end 300px ned
     },
   },
-  mounted() {
-    this.fetchPosts();
-    // Listen for scroll events
-    window.addEventListener("scroll", this.handleScroll);
+  mounted() { // lifecycle hook der der kører efter "mounted"
+    this.fetchPosts(); // metode til at fetch post efter load
+    window.addEventListener("scroll", this.handleScroll); // tilføjer en event listener til scroll
   },
-  beforeDestroy() {
+  beforeDestroy() { // licecycle hook der kører når kompontenten er ved at blive destroyed
     window.removeEventListener("scroll", this.handleScroll);
   },
+  // en watcher til at overvåge ændringer i posts
   watch: {
     posts(newPosts) {
-      // Add delay for fade-in when posts are loaded
+      // når posts ændrer sig, så kører denne funktion
       this.$nextTick(() => {
+        // sørger for at dom-opdateringer er afslutter først.
         const cards = document.querySelectorAll('.fade-in-card');
         cards.forEach((card, index) => {
           card.classList.add(`fade-delay-${index}`);
-          // Add the "visible" class after a small delay for animation
-          setTimeout(() => card.classList.add('visible'), index * 200); // Delay for each card
+          setTimeout(() => card.classList.add('visible'), index * 200);
         });
       });
     }

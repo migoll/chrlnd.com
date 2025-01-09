@@ -50,13 +50,13 @@
     </div>
   </template>
   
-  <script>
+  <script> // samme kode som på udstillinger, bare en anden category
   export default {
     data() {
       return {
         posts: [],
         loading: true,
-        showScrollTopButton: false, // Track visibility of the button
+        showScrollTopButton: false,
       };
     },
     methods: {
@@ -88,12 +88,11 @@
         });
       },
       handleScroll() {
-        this.showScrollTopButton = window.scrollY > 300; // Show button after scrolling 300px
+        this.showScrollTopButton = window.scrollY > 300;
       },
     },
     mounted() {
       this.fetchPosts();
-      // Listen for scroll events
       window.addEventListener("scroll", this.handleScroll);
     },
     beforeDestroy() {
@@ -101,13 +100,11 @@
     },
     watch: {
       posts(newPosts) {
-        // Add delay for fade-in when posts are loaded
         this.$nextTick(() => {
           const cards = document.querySelectorAll('.fade-in-card');
           cards.forEach((card, index) => {
             card.classList.add(`fade-delay-${index}`);
-            // Add the "visible" class after a small delay for animation
-            setTimeout(() => card.classList.add('visible'), index * 200); // Delay for each card
+            setTimeout(() => card.classList.add('visible'), index * 200);
           });
         });
       }

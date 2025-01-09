@@ -205,6 +205,7 @@
   list-style: none;
   min-width: 150px;
   z-index: 10;
+  transition: all 1s ease;
 }
 
 .dropdown-menu li {

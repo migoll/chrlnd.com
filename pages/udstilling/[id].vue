@@ -2,20 +2,16 @@
   <div>
     <div v-if="loading">Loading...</div>
     <div v-else>
-      <!-- Show the filtered post -->
       <div v-if="post">
         <div v-if="post.acf">
-          <!-- ACF data -->
           <div class="udstilling-landing-page">
             <p>{{ post.acf.start_date }} <span v-if="post.acf.end_date"> - {{ post.acf.end_date }}</span></p>
             <h1>{{ post.acf.title }}</h1>
             <img :src="post.acf.image.url" alt="">
           </div>
-          <!-- Section Heading and Description -->
           <div class="udstilling-information">
             <h2>{{ post.acf.section_heading }}</h2>
             <div v-html="post.acf.description" class="acf-description"></div>
-
             <div v-if="post.acf.participants" class="medvirkende">
               <div class="medvirkende-header" @click="toggleParticipants(post.id)">
                 <p>Medvirkende</p>
@@ -44,7 +40,6 @@
           </div>
         </div>
       </div>
-      <!-- Show a message if no post found -->
       <div v-else>
         <p>Post not found.</p>
       </div>
@@ -56,39 +51,42 @@
 export default {
   data() {
     return {
-      isOpen: null, // Only one post can be opened at a time
-      posts: [],
-      loading: true,
-      post: null, // Store the single post based on the ID
+      isOpen: null, // Holder styr på om hvilken deltager liste der er åben
+      posts: [], // Indeholder posts hentet fra API'en
+      loading: true, // Indikerer om noget data er i gang med at blive loadet, så loading effekt kan vises
+      post: null, // Den enkelte post der vil matche en ID
     };
   },
   methods: {
+    // funktion der åbner og lukker deltagerlisten
     toggleParticipants(postId) {
       this.isOpen = this.isOpen === postId ? null : postId;
     },
+    //funktion der henter posts fra API
     async fetchPosts() {
       try {
+        // funktion der nu henter posts kategori 5 = udstillinger
         const response = await fetch('https://dronninglund-kunstcenter.laustsen.info/wp-json/wp/v2/posts?categories=5');
         const data = await response.json();
         this.posts = data;
-
-        // Check if a specific post ID is provided in the URL
+        // finder den post der matcher id  i url
         const postId = this.$route.params.id;
         if (postId) {
           this.post = this.posts.find(post => post.id === parseInt(postId));
         }
       } catch (error) {
         console.error("Error fetching posts:", error);
+        // logger fejl hvis fetch ikke virker
       } finally {
+         // indikerer at loading er færdigt, også selvom der ikke var fejl
         this.loading = false;
       }
     }
   },
   computed: {
+        // beregner billeder til vors galleri baseret på det data der er fetched fra posten
   galleryImages() {
     if (!this.post || !this.post.acf) return [];
-    
-    // Gather all galleries into an array
     const galleries = [];
     for (let i = 1; i <= 10; i++) {
       const galleryKey = `image_gallery${i}`;
@@ -100,11 +98,12 @@ export default {
     return galleries;
   }
 },
+  // fetcher post når der er mounted
   mounted() {
     this.fetchPosts();
   },
   watch: {
-    // Watch for changes in the route (in case the post ID changes)
+    // watcher der holder øje med url og henter nyt data hvis ID ændrer sig
     '$route.params.id'(newId) {
       this.fetchPosts();
     }
@@ -127,7 +126,7 @@ export default {
 .udstilling-landing-page p {
   color: rgba(255, 255, 255, 0.50);
   border: 2px solid rgba(255, 255, 255, 0.20);
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 15px 15px;
   font-size: 1rem;
 }
@@ -174,7 +173,7 @@ export default {
 background: #D9D9D9;
 margin-top: 5rem;
 margin-bottom: 5rem;
-border-radius: 15px;
+border-radius: 6px;
 overflow: hidden;
 }
 
@@ -234,7 +233,7 @@ max-height: 500px;
   width: 100%;
 }
 
-/* Add this new rule to center images that are alone in a row */
+/* Centrer images hvis de er alene i en række */
 .image-gallery-udstilling img:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
