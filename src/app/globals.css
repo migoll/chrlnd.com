@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+p,
+i,
+svg,
+link,
+button {
+  transition: all 0.2s ease;
+}
+
+p {
+  @apply text-2xl font-medium;
+}
+
+li {
+  @apply text-lg font-medium;
+}
+
+h1,
+h2,
+h3 {
+  @apply tracking-tight;
+}
+
+body {
+  @apply bg-white text-black dark:text-white dark:bg-black;
+}
