@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="flex flex-col gap-8">
           <div>
             <h3 className="font-bold text-lg pt-2">
-              Reamage — Image compressor and formatter
+              Reamage- image compressor and formatter
             </h3>
             <div className="flex gap-4 pb-8">
               <p className="text-sm text-neutral-500">React + Electron</p>
@@ -77,6 +77,24 @@ export default function HomePage() {
                 className="mx-auto mb-8"
                 width={640}
                 height={0}
+              />
+            </a>
+          </div>
+          <div>
+            <a href="/my-work/border-animation-case-study">
+              <h3 className="font-bold text-lg pt-2">
+                Jooser - Instant payment crypto app design
+              </h3>
+              <div className="flex gap-4 pb-16">
+                <p className="text-sm text-neutral-500">Design</p>
+                <p className="text-sm text-neutral-500">Application</p>
+              </div>
+              <Image
+                src="/images/case-study-two-image.png"
+                alt="Case study image"
+                className="aspect-square object-contain mb-8"
+                width={640}
+                height={640}
               />
             </a>
           </div>
@@ -96,24 +114,6 @@ export default function HomePage() {
                 className="aspect-square mx-auto mb-8"
                 width={540}
                 height={540}
-              />
-            </a>
-          </div>
-          <div>
-            <a href="/my-work/border-animation-case-study">
-              <h3 className="font-bold text-lg pt-2">
-                Jooser - Instant payment crypto app design
-              </h3>
-              <div className="flex gap-4 pb-16">
-                <p className="text-sm text-neutral-500">Design</p>
-                <p className="text-sm text-neutral-500">Application</p>
-              </div>
-              <Image
-                src="/images/case-study-two-image.png"
-                alt="Case study image"
-                className="aspect-square object-contain mb-8"
-                width={640}
-                height={640}
               />
             </a>
           </div>

@@ -6,7 +6,7 @@ export default function CaseStudyReamage() {
     <>
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
         <a href="/">
-          <button className="text-3xl font-bold bg-black text-white rounded-full w-[96px] h-[144px] hover:bg-neutral-800 dark:border-3">
+          <button className="text-3xl font-bold bg-black text-white rounded-full w-[96px] h-[144px] hover:bg-white dark:border-3 hover:text-black">
             ←
           </button>
         </a>
