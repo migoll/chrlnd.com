@@ -72,7 +72,7 @@ export default function CaseStudyReamage() {
         <p>
           The app supports drag-and-drop uploads, batch compression, output
           format and quality selection, and both individual or bulk downloading.
-          There's also a "select mode" for picking specific compressed images.
+          I also implemented a select mode, to download only selected images.
         </p>
 
         <p>
