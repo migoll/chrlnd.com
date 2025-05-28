@@ -1,4 +1,3 @@
-// Next.js tror åbenbart at onClick på min alert længere nede i et component er et "server component", så use client gør at den del er et Client Component
 "use client";
 
 import { Section } from "@/components/section";
@@ -21,10 +20,12 @@ export default function HomePage() {
     <>
       <Section contentClassName="flex gap-12 flex-col px-8 py-32">
         <div className="w-[96px] h-[144px] object-cover rounded-full overflow-hidden">
-          <img
+          <Image
             src="/images/cropped-portrait-image.jpg"
             alt="Portrait of Christian Lund"
-            className="rounded-full"
+            width={96}
+            height={144}
+            className="rounded-full object-cover"
           />
         </div>
         <div className="flex gap-8 flex-col">
@@ -38,7 +39,7 @@ export default function HomePage() {
         </div>
         <div className="flex gap-6 items-center">
           <a href="mailto:chris.lund02@gmail.com">
-            <button className="text-2xl font-medium border-3 border-black rounded-full py-3 px-5 hover:bg-neutral-900 hover:text-neutral-100 dark:border-white">
+            <button className="text-2xl font-medium border-3 border-black rounded-full py-3 px-5 hover:bg-white hover:text-black dark:border-white">
               Reach out
             </button>
           </a>
@@ -61,6 +62,24 @@ export default function HomePage() {
           My work
         </h2>
         <div className="flex flex-col gap-8">
+          <div>
+            <h3 className="font-bold text-lg pt-2">
+              Reamage — Image compressor and formatter
+            </h3>
+            <div className="flex gap-4 pb-8">
+              <p className="text-sm text-neutral-500">React + Electron</p>
+              <p className="text-sm text-neutral-500">App</p>
+            </div>
+            <a href="/my-work/reamage-case-study">
+              <Image
+                src="/images/reamage-teaser.png"
+                alt="Case study image"
+                className="mx-auto mb-8"
+                width={640}
+                height={0}
+              />
+            </a>
+          </div>
           <div>
             <h3 className="font-bold text-lg pt-2">
               Sejr og Davidsens Dyrepension - Realized website for animal
@@ -95,24 +114,6 @@ export default function HomePage() {
                 className="aspect-square object-contain mb-8"
                 width={640}
                 height={640}
-              />
-            </a>
-          </div>
-          <div>
-            <a href="/my-work/guldborgsund-zoo-case-study">
-              <h3 className="font-bold text-lg pt-2">
-                Guldborgsund Zoo og Have - Realized website for zoo
-              </h3>
-              <div className="flex gap-4 pb-16">
-                <p className="text-sm text-neutral-500">Wordpress API</p>
-                <p className="text-sm text-neutral-500">Website</p>
-              </div>
-              <Image
-                src="/images/case-study-3-image.png"
-                alt="Case study image"
-                className="mx-auto"
-                width={440}
-                height={440}
               />
             </a>
           </div>
