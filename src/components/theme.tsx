@@ -8,39 +8,38 @@ import {
   useState,
 } from "react";
 
-// Definerer en type på tema der enten er light eller dark
 type Theme = "light" | "dark";
 
 interface ThemeContextValue {
   theme: Theme;
-  setTheme: (theme: Theme | ((theme: Theme) => Theme)) => void;
+  setTheme: (theme: Theme | ((theme: Theme) => Theme | null)) => void;
 }
 
-//Her oprettes der en kontekst der bruges til at dele temaets tilstand
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export interface ThemeProviderProps {
   children: ReactNode;
 }
-//Definerer en ThemeProvider der håndterer temaets tilstand
-export function ThemeProvider(props: ThemeProviderProps) {
-  //variabel der sætter temaets standard til light
-  const [theme, setTheme] = useState<Theme>("light");
 
-  //variabel der sætter temaet baseret på brugerens præference i localstorage
+export function ThemeProvider(props: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme | null>(null); // start with null to avoid hydration mismatch
+
+  // Init theme from localStorage or system
   useEffect(() => {
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark"
+      "(prefers-color-scheme: dark)"
     ).matches;
-
-    setTheme(localStorage.theme ?? prefersDark ? "dark" : "light");
+    const stored = localStorage.getItem("theme") as Theme | null;
+    const initial = stored ?? (prefersDark ? "dark" : "light");
+    setTheme(initial);
   }, []);
 
-  //en useEffect der kører hver gang temaet ændres for at synkroniseere med localstorage
+  // Sync to localStorage and class
   useEffect(() => {
+    if (!theme) return; //  Don't run until theme is set
+
     localStorage.theme = theme;
 
-    //Hvis prefersDark er true, adder den dark til html, hvis ikke, fjerner den
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -48,11 +47,12 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
   }, [theme]);
 
-  //variabel der definerer den value der skal deles med themecontext og sikrer at det matcher ThemeContextValue typen
-  const value = {
+  if (!theme) return null; // Optionally return nothing until theme is ready
+
+  const value: ThemeContextValue = {
     theme,
-    setTheme,
-  } satisfies ThemeContextValue;
+    setTheme: setTheme as ThemeContextValue["setTheme"],
+  };
 
   return (
     <ThemeContext.Provider value={value}>
@@ -61,7 +61,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
   );
 }
 
-//hook der gør tema kan bruges i komponenter
 export function useTheme() {
   const context = useContext(ThemeContext);
 
