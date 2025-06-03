@@ -17,8 +17,10 @@ import { GeistMono } from "geist/font/mono";
 import { clsx } from "clsx";
 import { Section } from "@/components/section";
 import { ThemeProvider } from "@/components/theme";
+import { VerticalLines } from "@/components/vertical-lines";
+import { SectionIndexProvider } from "@/components/section-index";
 
-// 🟡 Tailwind (globals.css) import SKAL komme efter themeScript er defineret
+// Tailwind (globals.css) import SKAL komme efter themeScript er defineret
 import "./globals.css";
 
 export const metadata = {
@@ -41,12 +43,15 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <ThemeProvider>
-          <Section contentClassName="h-8" />
-          <TheHeader />
-          {children}
-          <TheFooter />
-        </ThemeProvider>
+        <SectionIndexProvider>
+          <VerticalLines />
+          <Section contentClassName="h-8 hidden md:flex" />
+          <ThemeProvider>
+            <TheHeader />
+            {children}
+            <TheFooter />
+          </ThemeProvider>
+        </SectionIndexProvider>
       </body>
     </html>
   );
