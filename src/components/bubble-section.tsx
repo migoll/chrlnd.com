@@ -43,7 +43,7 @@ export function BubbleSection(props: BubbleSectionProps) {
       ></div>
       <div
         className={clsx(
-          "border px-4 rounded-full py-16 flex justify-center items-center flex-col text-center max-w-screen-sm w-full box-content dark:border-white dark:border-opacity-[12%] custom-sm:px-8",
+          "border px-4 rounded-full py-16 flex justify-center items-center flex-col text-center max-w-[500px] w-full box-content dark:border-white dark:border-opacity-[12%]",
           contentClassName
         )}
       >

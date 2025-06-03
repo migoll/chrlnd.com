@@ -1,29 +1,38 @@
-// Next.js tror åbenbart at onClick på min alert længere nede i et component er et "server component", så use client gør at den del er et Client Component
 "use client";
 
-// clsx sørger for at jeg kan have to forskellige class strings på samme element fx containerClassName og contentClassName
 import { clsx } from "clsx";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
+import { useNextSectionIndex } from "@/components/section-index";
 
 export interface SectionProps {
   children?: ReactNode;
   contentClassName?: string;
   containerClassName?: string;
+  delayIndex?: number; // Optional prop to control the delay for animation
 }
 
 export function Section(props: SectionProps) {
   const { children, contentClassName, containerClassName } = props;
+  const delayIndex = useNextSectionIndex();
 
   return (
-    <div
-      className={clsx(
-        "border-b border-neutral-950 last:border-b-0 border-opacity-10 dark:border-white dark:border-opacity-[12%]",
-        containerClassName
-      )}
-    >
+    <div className={clsx("relative", containerClassName)}>
+      {/* Én top-linje fra venstre → hele bredden */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{
+          duration: delayIndex === 0 ? 0.2 : 1,
+          delay: (delayIndex ?? 0) * 0.1,
+        }}
+        className="absolute top-0 left-0 h-px w-full bg-white/20 dark:bg-white/20 origin-left"
+      />
+
+      {/* Content wrapper */}
       <div
         className={clsx(
-          " max-w-full mx-auto border-x border-neutral-950 border-opacity-10 box-content px-8 dark:border-white dark:border-opacity-[12%] custom-sm:max-w-screen-sm custom-sm:w-full",
+          "relative z-10 max-w-full mx-auto box-content px-8 custom-sm:max-w-screen-sm custom-sm:w-full",
           contentClassName
         )}
       >

@@ -12,7 +12,7 @@ export function TheHeader() {
   };
 
   return (
-    <Section contentClassName="p-8 font-medium">
+    <Section delayIndex={0} contentClassName="p-8 font-medium">
       <nav className="flex justify-between items-center">
         <div className="link">
           <a href="/">
