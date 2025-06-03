@@ -1,12 +1,3 @@
-import "./globals.css";
-import { TheHeader } from "@/components/the-header";
-import { TheFooter } from "@/components/the-footer";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { clsx } from "clsx";
-import { Section } from "@/components/section";
-import { ThemeProvider } from "@/components/theme";
-
 const themeScript = `
   (function() {
     try {
@@ -19,6 +10,17 @@ const themeScript = `
   })();
 `;
 
+import { TheHeader } from "@/components/the-header";
+import { TheFooter } from "@/components/the-footer";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { clsx } from "clsx";
+import { Section } from "@/components/section";
+import { ThemeProvider } from "@/components/theme";
+
+// 🟡 Tailwind (globals.css) import SKAL komme efter themeScript er defineret
+import "./globals.css";
+
 export const metadata = {
   title: "chrlnd.com",
   description: "Portfolio website by Christian Lund",
@@ -30,7 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx(GeistSans.variable, GeistMono.variable)}>
+    <html
+      lang="en"
+      className={clsx(GeistSans.variable, GeistMono.variable)}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
