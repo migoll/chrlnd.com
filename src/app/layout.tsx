@@ -45,7 +45,7 @@ export default function RootLayout({
       <body>
         <SectionIndexProvider>
           <VerticalLines />
-          <Section contentClassName="h-8 hidden md:flex" />
+          <Section hideLine contentClassName="h-8" />
           <ThemeProvider>
             <TheHeader />
             {children}
