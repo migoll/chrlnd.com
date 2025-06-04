@@ -10,24 +10,27 @@ export interface SectionProps {
   contentClassName?: string;
   containerClassName?: string;
   delayIndex?: number; // Optional prop to control the delay for animation
+  hideLine?: boolean; // Optional prop to hide the top line
 }
 
 export function Section(props: SectionProps) {
-  const { children, contentClassName, containerClassName } = props;
+  const { children, contentClassName, containerClassName, hideLine } = props;
   const delayIndex = useNextSectionIndex();
 
   return (
     <div className={clsx("relative", containerClassName)}>
       {/* Én top-linje fra venstre → hele bredden */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{
-          duration: delayIndex === 0 ? 0.2 : 1,
-          delay: (delayIndex ?? 0) * 0.1,
-        }}
-        className="absolute top-0 left-0 h-px w-full bg-white/20 dark:bg-white/20 origin-left"
-      />
+      {!hideLine && (
+        <motion.div
+          initial={{ scaleX: 0, opacity: 1 }}
+          animate={{ scaleX: 1, opacity: 0.2 }}
+          transition={{
+            duration: delayIndex === 0 ? 0.4 : 1,
+            delay: (delayIndex ?? 0) * 0.1,
+          }}
+          className="absolute top-0 left-0 h-px w-full bg-black dark:bg-white origin-left"
+        />
+      )}
 
       {/* Content wrapper */}
       <div
