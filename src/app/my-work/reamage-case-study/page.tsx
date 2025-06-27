@@ -13,7 +13,7 @@ export default function CaseStudyReamage() {
         <p className="font-medium text-neutral-500 text-xl">Case</p>
         <div className="flex gap-8 flex-col">
           <h1 className="font-bold text-4xl tracking-tight custom-sm:text-7xl">
-            Reamage — Image compressor and formatter
+            Reamage - Image compressor and formatter
           </h1>
           <div className="flex justify-between w-[90%] gap-8">
             <div>
