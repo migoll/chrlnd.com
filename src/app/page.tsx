@@ -264,10 +264,10 @@ export default function HomePage() {
       {/* Life Progress Bar */}
       <div className="fixed bottom-0 left-0 w-screen z-50">
         {/* Progress bar container */}
-        <div className="relative w-full h-1 bg-white/5 dark:bg-white/5">
+        <div className="relative w-full h-1 bg-black/5 dark:bg-white/5">
           {/* Progress fill */}
           <div
-            className="absolute bottom-0 left-0 h-full bg-white/70 dark:bg-white/70 transition-all duration-1000 ease-out"
+            className="absolute bottom-0 left-0 h-full bg-black/50 dark:bg-white/80 transition-all duration-1000 ease-out"
             style={{
               width: isAnimated ? `${Math.min(percentage, 100)}%` : "0%",
             }}
@@ -294,7 +294,7 @@ export default function HomePage() {
               }}
             >
               <span 
-                className="text-xs text-white/70 dark:text-white/70 whitespace-nowrap transition-all duration-75 ease-linear"
+                className="text-xs text-black/70 dark:text-white/70 whitespace-nowrap transition-all duration-75 ease-linear"
                 style={{ fontVariantNumeric: "tabular-nums" }}
               >
                 {percentage.toFixed(2)}%
@@ -312,7 +312,7 @@ export default function HomePage() {
                 fontVariantNumeric: "tabular-nums",
               }}
             >
-              {age.toFixed(10)} years
+              {age.toFixed(10)} years old
             </div>
           )}
         </div>
