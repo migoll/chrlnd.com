@@ -14,11 +14,57 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CaseStudyWrapper } from "@/components/case-study-wrapper";
 
 export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [age, setAge] = useState(0);
+  const [percentage, setPercentage] = useState(0);
+  const [isAnimated, setIsAnimated] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const LIFE_EXPECTANCY = 80.4;
+  const BIRTH_DATE = new Date("2002-06-14");
+
+  useEffect(() => {
+    let animationFrameId: number;
+
+    const updateAge = () => {
+      const now = new Date();
+      const diffTime = now.getTime() - BIRTH_DATE.getTime();
+      const ageInYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+      const calculatedPercentage = (ageInYears / LIFE_EXPECTANCY) * 100;
+      
+      setAge(ageInYears);
+      setPercentage(calculatedPercentage);
+      
+      // Continue animation loop
+      animationFrameId = requestAnimationFrame(updateAge);
+    };
+
+    // Calculate immediately
+    const now = new Date();
+    const diffTime = now.getTime() - BIRTH_DATE.getTime();
+    const ageInYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+    const calculatedPercentage = (ageInYears / LIFE_EXPECTANCY) * 100;
+    setAge(ageInYears);
+    setPercentage(calculatedPercentage);
+
+    // Start smooth animation loop
+    animationFrameId = requestAnimationFrame(updateAge);
+
+    // Trigger bar animation after a brief delay
+    setTimeout(() => {
+      setIsAnimated(true);
+    }, 100);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -214,6 +260,63 @@ export default function HomePage() {
           </p>
         </BubbleSection>
       </Section>
+
+      {/* Life Progress Bar */}
+      <div className="fixed bottom-0 left-0 w-screen z-50">
+        {/* Progress bar container */}
+        <div className="relative w-full h-1 bg-white/5 dark:bg-white/5">
+          {/* Progress fill */}
+          <div
+            className="absolute bottom-0 left-0 h-full bg-white/70 dark:bg-white/70 transition-all duration-1000 ease-out"
+            style={{
+              width: isAnimated ? `${Math.min(percentage, 100)}%` : "0%",
+            }}
+          />
+        </div>
+        
+        {/* Hover area for tooltip */}
+        <div
+          className="absolute bottom-0 h-4 cursor-pointer"
+          style={{
+            left: 0,
+            width: isAnimated ? `${Math.min(percentage, 100)}%` : "0%",
+          }}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          {/* Percentage display above the progress point - only on hover */}
+          {isHovering && (
+            <div
+              className="absolute bottom-full mb-8 pointer-events-none"
+              style={{
+                left: "100%",
+                transform: "translateX(-50%)",
+              }}
+            >
+              <span 
+                className="text-xs text-white/70 dark:text-white/70 whitespace-nowrap transition-all duration-75 ease-linear"
+                style={{ fontVariantNumeric: "tabular-nums" }}
+              >
+                {percentage.toFixed(2)}%
+              </span>
+            </div>
+          )}
+          
+          {/* Hover tooltip positioned at the end of progress */}
+          {isHovering && (
+              <div
+              className="absolute bottom-full mb-2 px-2 py-1 bg-white/90 dark:bg-black/90 text-black dark:text-white text-xs rounded pointer-events-none whitespace-nowrap transition-all duration-75 ease-linear"
+              style={{
+                left: "100%",
+                transform: "translateX(-50%)",
+                fontVariantNumeric: "tabular-nums",
+              }}
+            >
+              {age.toFixed(10)} years
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 }
