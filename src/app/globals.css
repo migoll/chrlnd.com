@@ -39,3 +39,29 @@ body {
   opacity: 0;
   transform: translateY(10px);
 }
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* Terminal selection color - only for terminal */
+.terminal-container ::selection,
+.terminal-container *::selection {
+  background-color: #09f0c6 !important;
+  color: #111111 !important;
+}
+
+.terminal-container ::-moz-selection,
+.terminal-container *::-moz-selection {
+  background-color: #09f0c6 !important;
+  color: #111111 !important;
+}
