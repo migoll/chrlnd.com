@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { TALL } from "./src/lib/screens";
 
 const config: Config = {
   darkMode: "selector",
@@ -9,12 +10,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        ink: "#111111",
+        paper: "#f0f0f0",
+      },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        // Apple devices get Hiragino Sans for free, everyone else gets Geist
+        sans: ['"Hiragino Sans"', "var(--font-geist-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
       screens: {
         "custom-sm": "706px",
+        tall: { raw: TALL },
       },
       borderWidth: {
         "3": "3px",
