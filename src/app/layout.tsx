@@ -1,31 +1,18 @@
-const themeScript = `
-  (function() {
-    try {
-      var stored = localStorage.getItem("theme");
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (stored === "dark" || (!stored && prefersDark)) {
-        document.documentElement.classList.add("dark");
-      }
-    } catch (_) {}
-  })();
-`;
-
-import { TheHeader } from "@/components/the-header";
-import { TheFooter } from "@/components/the-footer";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { clsx } from "clsx";
-import { Section } from "@/components/section";
-import { ThemeProvider } from "@/components/theme";
-import { VerticalLines } from "@/components/vertical-lines";
-import { SectionIndexProvider } from "@/components/section-index";
+import { LifeBar } from "@/components/life-bar";
+import { LiveFavicon } from "@/components/live-favicon";
 
-// Tailwind (globals.css) import SKAL komme efter themeScript er defineret
 import "./globals.css";
 
 export const metadata = {
-  title: "chrlnd.com",
-  description: "Portfolio website by Christian Lund",
+  title: "Christian Lund",
+  description: "Christian Lund, software engineer.",
+};
+
+export const viewport = {
+  themeColor: "#111111",
 };
 
 export default function RootLayout({
@@ -34,24 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={clsx(GeistSans.variable, GeistMono.variable)}
-      suppressHydrationWarning
-    >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+    // Dark only: the class stays on so older pages' dark: styles still apply
+    <html lang="en" className={clsx("dark", GeistSans.variable, GeistMono.variable)}>
       <body>
-        <SectionIndexProvider>
-          <VerticalLines />
-          <Section hideLine contentClassName="h-8" />
-          <ThemeProvider>
-            <TheHeader />
-            {children}
-            <TheFooter />
-          </ThemeProvider>
-        </SectionIndexProvider>
+        {children}
+        <LifeBar />
+        <LiveFavicon />
       </body>
     </html>
   );

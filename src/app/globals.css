@@ -1,22 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #111111;
+  --fg: #f0f0f0;
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
+  /* Opening a project hides the page scrollbar; keep its space so nothing shifts */
+  scrollbar-gutter: stable;
 }
 
-a,
-p,
-i,
-svg,
-link,
-button {
-  transition: all 0.2s ease;
+/* Scrolling stops dead at the top and bottom: no rubber-band stretch past the edges.
+   Safari wants it on both elements */
+html,
+body {
+  overscroll-behavior: none;
 }
 
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: theme("fontFamily.sans");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* Older case-study pages still lean on these */
 p {
   @apply text-2xl font-medium;
 }
@@ -31,37 +51,31 @@ h3 {
   @apply tracking-tight;
 }
 
-body {
-  @apply bg-white text-black dark:text-white dark:bg-black;
+/* Thin, quiet underline used for every link on the one-pager */
+.link {
+  text-decoration-line: underline;
+  text-decoration-color: rgb(240 240 240 / 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
 }
 
-.fade-in {
+.link:hover {
+  text-decoration-color: rgb(240 240 240 / 1);
+}
+
+/* Corners scale with the card (circular on 4:3), so the preview and the open view match */
+.cover-card {
+  border-radius: 2% / 2.6667%;
+}
+
+/* The Life grid fades out while a case preview is showing, so the two never overlap */
+main:has([data-work-list] a:hover, [data-work-list] a:focus-visible) [data-life] {
   opacity: 0;
-  transform: translateY(10px);
 }
 
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  51%, 100% {
-    opacity: 0;
-  }
-}
-
-.cursor-blink {
-  animation: blink 1s infinite;
-}
-
-/* Terminal selection color - only for terminal */
-.terminal-container ::selection,
-.terminal-container *::selection {
-  background-color: #09f0c6 !important;
-  color: #111111 !important;
-}
-
-.terminal-container ::-moz-selection,
-.terminal-container *::-moz-selection {
-  background-color: #09f0c6 !important;
-  color: #111111 !important;
 }
